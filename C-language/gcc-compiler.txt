@@ -1,0 +1,2 @@
+gcc -Wall -Wextra -pedantic -std=c99 -o my_program my_program.c
+
