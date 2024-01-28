@@ -1,0 +1,27 @@
+body {
+    font-family: 'Times New Roman', sans-serif;
+    background-image: url(https://www.google.com/search?client=firefox-b-d&sca_esv=602184151&sxsrf=ACQVn0-Aj6xijyjrY3wpRY4EUrjW7uG3Uw:1706468933866&q=jackie+chan&tbm=isch&source=lnms&sa=X&ved=2ahUKEwiD9v2U5ICEAxV8e6QEHQKFALcQ0pQJegQIDhAB&biw=1280&bih=595&dpr=1.5#imgrc=L0Uk-vM5wNU5UM); /* Replace with the actual path to your background image */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 20px;
+    color: #460b0b; /* Set text color to make it readable on the background */
+}
+
+h1 {
+    color: #3498db;
+}
+
+p {
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
