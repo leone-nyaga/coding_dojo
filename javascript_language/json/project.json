@@ -1,0 +1,15 @@
+{
+	"project" : {
+		"name" : "Lee",
+		"description" : "simple json project",
+		"authors" : {
+			"name" : "Lee",
+			"email" : "lee@gmail.com"
+		},
+		"repository" : {
+			"url" : "https://github.com/lee/coding_dojo",
+			"type" : "git"
+		},
+		"version" : "1.0.0"
+	}
+}
