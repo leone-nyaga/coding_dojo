@@ -1,0 +1,14 @@
+{
+	"cattle" : {
+		"species" : "fresian",
+		"habitat" : "man's home",
+		"lifespanInYears" : 40
+	},
+	
+	"human" : {
+		"species" : "homo sapien",
+		"habitat" : "home",
+		"lifespanInYears" : 75
+	}
+}
+
