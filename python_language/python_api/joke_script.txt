@@ -1,0 +1,7 @@
+Write a Python script that uses the JokeAPI to fetch a random programming joke and displays it.
+
+Requirements:
+
+1. Use the requests module for making API requests.
+2. Make a request to the JokeAPI.
+3. Display the fetched joke.
