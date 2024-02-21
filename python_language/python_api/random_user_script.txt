@@ -1,0 +1,7 @@
+Simple REST API Question:
+
+Write a Python script that fetches and displays information about a random user from the "Random User Generator" API (https://randomuser.me/). The script should print the user's name, email, and date of birth.
+Requirements:
+
+1. Use the requests module to make an API request.
+2. Display the user's name, email, and date of birth on the standard output.
