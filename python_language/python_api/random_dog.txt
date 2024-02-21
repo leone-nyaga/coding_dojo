@@ -1,0 +1,8 @@
+Question:
+Write a Python script that interacts with the Dog CEO's Dog API to retrieve and display a random dog image.
+
+Requirements:
+
+1. Use the requests module for making API requests.
+2. Make a request to the Dog CEO's Dog API to fetch a random dog image.
+3. Display the fetched dog image.
