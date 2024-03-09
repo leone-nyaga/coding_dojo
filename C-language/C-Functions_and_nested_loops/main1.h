@@ -5,6 +5,7 @@
 
 int main(void);
 int areaOfRect(int length, int width);
+int sum(int a, int b);
 
 
 #endif
