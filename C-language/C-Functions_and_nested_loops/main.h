@@ -7,6 +7,7 @@ int main(void);
 int _putchar(char c);
 void print_alphabet(void);
 void printMultiplicationTable(int number, int range);
-void multiplicationTable();
+void multiplicationTable(void);
+void printPyramid(int rows);
 
 #endif
