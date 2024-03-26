@@ -43,5 +43,5 @@ marks = [80, 99, 68, 91, 87, 75, 85]
 average_marks = find_averageMarks(marks)
 grade = compute_grade(average_marks)
 
-print(f"Your average marks is {average_marks}")
+print(f"Your average marks is {average_marks:.2f}")
 print(f"Your grade is {grade}")
