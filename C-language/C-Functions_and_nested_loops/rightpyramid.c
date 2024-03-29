@@ -16,7 +16,7 @@ void printPyramid(int rows)
 	/* loop for the spaces before the start of each star */
 	for (space = 1; space <= rows - 1; space++)
 	{
-		printf(" ");
+		printf("  ");
 	}
 	/* loop to print stars */
 	for (j = 1; j <= 2 * i - 1; j++)
