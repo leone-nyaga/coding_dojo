@@ -4,5 +4,6 @@
 #include <stdio.h>
 
 int main(void);
+void printArray(int arr[], int size);
 
 #endif
