@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 class SoftwareEngineer:
+    alias = "Keyboard Warrior"
 
     def __init__(self, name, age, level, salary):
         #instance attributes
@@ -15,3 +16,5 @@ class SoftwareEngineer:
 #instance
 se1 = SoftwareEngineer("Mike", 22, "Junior", 75000)
 print(se1)
+print(se1.alias)
+print(SoftwareEngineer.alias)
