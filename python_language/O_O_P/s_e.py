@@ -13,7 +13,7 @@ class SoftwareEngineer:
     def __str__(self):
         return f"Name: {self.name}, Age: {self.age}, Level: {self.level}, Salary: {self.salary}"
 
-#instance
+#instance(object)
 se1 = SoftwareEngineer("Mike", 22, "Junior", 75000)
 print(se1)
 print(se1.alias)
