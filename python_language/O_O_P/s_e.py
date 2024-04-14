@@ -12,6 +12,8 @@ class SoftwareEngineer:
 
     def __str__(self):
         return f"Name: {self.name}, Age: {self.age}, Level: {self.level}, Salary: {self.salary}"
+    def __repr__(self):
+        return f"Name: {self.name}, Age: {self.age}, Level: {self.level}, Salary: {self.salary}"
 
 #instance(object)
 se1 = SoftwareEngineer("Mike", 22, "Junior", 75000)
@@ -20,3 +22,4 @@ print(se1.alias)
 print(SoftwareEngineer.alias)
 se2 = SoftwareEngineer("Jane", 39, "Senior", 100000)
 print(se2)
+print(repr(se1))
