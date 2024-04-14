@@ -15,6 +15,14 @@ class SoftwareEngineer:
     def __repr__(self):
         return f"Name: {self.name}, Age: {self.age}, Level: {self.level}, Salary: {self.salary}"
 
+    def entrySalary(self, age):
+        if age < 25:
+            return 50000
+        if age < 35:
+            return 75000
+        else:
+            return 100000
+
 #instance(object)
 se1 = SoftwareEngineer("Mike", 22, "Junior", 75000)
 print(se1)
@@ -23,3 +31,4 @@ print(SoftwareEngineer.alias)
 se2 = SoftwareEngineer("Jane", 39, "Senior", 100000)
 print(se2)
 print(repr(se1))
+print("Entry Salary: ", se1.entrySalary(se1.age))
