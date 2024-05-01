@@ -14,3 +14,8 @@ Dave.withdraw(50000)
 Dave.withdraw(100)
 
 Dave.transfer(10000, Sara)
+
+Mike = InterestRewardsAcct(1000, "Mike")
+Mike.getBalance()
+Mike.deposit(100)
+Mike.transfer(300, Dave)
