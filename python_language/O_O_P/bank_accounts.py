@@ -55,9 +55,9 @@ class SavingsAcct(InterestRewardsAcct):
 
     def withdraw(self, amount):
         try:
-            self.vaibleTranscation(amount + self.fee)
+            self.viableTransaction(amount + self.fee)
             self.balance = self.balance - (amount + self.fee)
-            print("\Withdraw Completed!")
+            print("\nWithdraw Completed!")
             self.getBalance()
         except BalanceException as error:
             print(f"\nWithdraw interrupted!")
