@@ -19,3 +19,8 @@ Mike = InterestRewardsAcct(1000, "Mike")
 Mike.getBalance()
 Mike.deposit(100)
 Mike.transfer(300, Dave)
+
+Jim = SavingsAcct(1000, "Jim")
+Jim.getBalance()
+Jim.deposit(15000)
+Jim.transfer(1000, Sara)
