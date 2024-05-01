@@ -9,3 +9,6 @@ Dave.getBalance()
 Sara.getBalance()
 
 Sara.deposit(1000)
+
+Dave.withdraw(50000)
+Dave.withdraw(100)
