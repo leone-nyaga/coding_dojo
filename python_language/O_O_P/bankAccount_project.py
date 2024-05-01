@@ -12,3 +12,5 @@ Sara.deposit(1000)
 
 Dave.withdraw(50000)
 Dave.withdraw(100)
+
+Dave.transfer(10000, Sara)
