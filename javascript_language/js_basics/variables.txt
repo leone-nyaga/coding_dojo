@@ -1,0 +1,24 @@
+In JavaScript we declare variables in three ways:
+	1. var
+	2. const
+	3. let
+
+1. let
+You can use "let" keyword to declare a variable.
+
+	let message;
+
+In mordern JavaScript, let has replaced the "var" keyword.
+
+2. var
+you can use "var" keyword to declare a variable.
+
+	var message;
+
+In mordern JavaScript, "var" has been replaced by "let".
+
+3. const
+You can use "const" keyword to declare a variable.
+Value declared cannot be changed later.
+
+	const message;
