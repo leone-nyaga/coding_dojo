@@ -22,3 +22,30 @@ You can use "const" keyword to declare a variable.
 Value declared cannot be changed later.
 
 	const message;
+
+RULES OF VARIABLE NAMING
+
+1. Valid Characters: Variable names can contain letters (both uppercase and lowercase), digits, underscores (_), and dollar signs ($).
+
+2.Cannot Start with a Digit: Variable names cannot start with a digit.
+They must begin with a letter, underscore, or dollar sign.
+
+3. Case-Sensitive: JavaScript is case-sensitive, so myVar, MyVar, and myvar are all considered different variables.
+
+4. Reserved Keywords: You cannot use JavaScript reserved keywords (such as if, else, for, function, let, const, var, etc.) as variable names.
+
+5. Meaningful: Choose variable names that are meaningful and descriptive of the data they represent.
+This helps improve the readability and maintainability of your code.
+
+6. CamelCase: It's common to use camelCase for variable names in JavaScript.
+Start with a lowercase letter, and capitalize the first letter of each subsequent word in the name (except the first word).
+For example: myVariable, userName, totalAmount, etc.
+
+7. Avoid Abbreviations: While short variable names might save typing time, they can make your code harder to understand.
+Avoid using overly abbreviated or cryptic variable names.
+
+8. Avoid Single Letters: Except for loop counters (such as i, j, k), avoid using single-letter variable names.
+Instead, use descriptive names that convey the purpose of the variable.
+
+9. Consistent Naming Conventions: Stick to a consistent naming convention throughout your codebase to maintain clarity and readability.
+Whether you choose camelCase, snake_case, or another convention, be consistent.
