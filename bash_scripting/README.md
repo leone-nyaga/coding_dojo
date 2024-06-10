@@ -24,72 +24,72 @@ Local and global scope
 
 6. Input/Output Redirection
 
-Standard input, output, and error (<, >, 2>, &>)
-Pipelines (|)
-Here documents (<<EOF)
+. Standard input, output, and error (<, >, 2>, &>).
+. Pipelines (|).
+. Here documents (<<EOF).
 
 7. Text Processing
 
-grep, awk, sed, cut, sort, uniq, tr, wc
+. grep, awk, sed, cut, sort, uniq, tr, wc.
 
 8. String Manipulation
 
-Concatenation, substring extraction, length, replacement
+. Concatenation, substring extraction, length, replacement.
 
 9. Arrays
 
-Defining and using indexed arrays
-Looping through arrays
+. Defining and using indexed arrays.
+. Looping through arrays.
 
 10. Process Management
 
-Background and foreground processes (&, fg, bg, jobs, kill)
-Process substitution (<(), >())
+. Background and foreground processes (&, fg, bg, jobs, kill).
+. Process substitution (<(), >()).
 
 11. Exit Status and Error Handling
 
-Checking exit status ($?)
-Using trap for signal handling
+. Checking exit status ($?).
+. Using trap for signal handling.
 
 12. Scripting Best Practices
 
-Using #!/bin/bash
-Comments and documentation
-Indentation and readability
-Error checking and debugging (set -x, set -e)
+. Using #!/bin/bash.
+. Comments and documentation.
+. Indentation and readability.
+. Error checking and debugging (set -x, set -e).
 
 13. File Permissions and Ownership
 
-chmod, chown, chgrp
+. chmod, chown, chgrp.
 
 14. Date and Time Operations
 
-date command
-Formatting dates
+. date command.
+. Formatting dates.
 
 15. Package Management
 
-Installing and managing packages (apt-get, yum, brew, etc.)
+. Installing and managing packages (apt-get, yum, brew, etc.).
 
 16. Networking
 
-Basic networking commands (ping, curl, wget, netstat, ss)
+. Basic networking commands (ping, curl, wget, netstat, ss).
 
 17. Regular Expressions
 
-Using regex with grep, sed, awk
+. Using regex with grep, sed, awk.
 
 18. Advanced Features
 
-Using eval, exec
-Command substitution ($(command))
-Inline execution ($((expression)))
+. Using eval, exec.
+. Command substitution ($(command)).
+. Inline execution ($((expression))).
 
 19. BASH Built-ins
 
-Common built-in commands (type, builtin, help)
+. Common built-in commands (type, builtin, help).
 
 20. External Tools Integration
 
-Integrating with other tools and scripts
-Using cron jobs for automation
+. Integrating with other tools and scripts.
+. Using cron jobs for automation.
