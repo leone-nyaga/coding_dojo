@@ -1,0 +1,54 @@
+In computer programmng, variables are used to store data.
+e.g let x = 1;
+Here the name of the variable is "x" and stores value "1".
+
+In rust, variables are declared using the keyword "let".
+In rust, variables are immutable(they value cannot be changed after declaration and assignment).
+Instead, the keyword "mut" is used.
+let's see an example,
+
+fn main() {
+    // declare a variable with value 1
+    let x = 1;
+    println!("x = {}", x);
+
+    // change the value of variable x
+    x = 2;
+    println!("x = {}", x);
+}
+
+this will bring this error from the compiler,
+
+error[E0384]: cannot assign twice to immutable variable `x`
+ --> main.rs:7:5
+  |
+3 |     let x = 1;
+  |         -
+  |         |
+  |         first assignment to `x`
+  |         help: consider making this binding mutable: `mut x`
+...
+7 |     x = 2;
+  |     ^^^^^ cannot assign twice to immutable variable
+
+now let's see how to use mutable variables with the "mut" keyword.
+
+fn main() {
+    // declare a mutable variable with value 1
+    let mut x = 1;
+    println!("Value of x = {}", x);
+
+    // change the value of variable x
+    x = 2;
+    println!("Updated value of x = {}", x);
+}
+
+the output:
+Value of x = 1
+Updated value of x = 2
+
+Here, you can see we have successfully changed the value of the x variable. This is because we have defined the x variable using the mut keyword.
+
+RULES FOR VARIABLE NAMING
+1. rust is case sensitive, AGE != age
+2. 

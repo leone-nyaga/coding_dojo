@@ -1,0 +1,6 @@
+There are two ways of printing out put to the terminal:
+1. Using "print!"
+2. Using "println!"
+
+The major difference is that "print!" is that output is printed on the same line.
+"println!" supports new line hence why it's preferrably used.
