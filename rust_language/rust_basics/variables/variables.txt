@@ -51,4 +51,56 @@ Here, you can see we have successfully changed the value of the x variable. This
 
 RULES FOR VARIABLE NAMING
 1. rust is case sensitive, AGE != age
-2. 
+2. Variables must start with either a letter or an underscore. For example,
+	let age = 31;     	// valid and good practice
+	let _age = 31;    	// valid variable 
+	let 1age = 31;    // inavlid variable 
+3. Use underscore if we need to use two words as variable names. For example,
+	let first name = "Jack";    // invalid variable
+	let first_name = "Jack";    // valid variable
+	let first-name = "Jack";    // invalid variable
+4. Variable names can only contain letters, digits and an underscore character. For example,
+	let age1 = 31;        // valid variable
+	let age_num = 31;     // valid variable
+	let s@lary = 52352;   // invalid variable
+
+CONSTANTS
+constant is a special kind of variable whose value cannot be changed.
+In rust and similarly in C, we use the "const" keyword to create constants.
+
+for example:
+fn main() {
+    // declare a float constant
+    const PI: f32 = 3.14;
+
+    println!("Value of PI = {}", PI);
+}
+
+Output:
+Value of PI = 3.14
+
+Here, we declared a constant variable "PI" and we cannot change its value anywhere within the program.
+Let's try to reinitialize the constant variable.
+
+fn main() {
+    // declare a constant
+    const PI:f32 = 3.14;
+    println!("Initial Value of PI: {}", PI);
+
+    // change value of PI
+    PI = 535.23;
+    println!("Update Value of PI: {}", PI);
+}
+
+Output:
+error[E0070]: invalid left-hand side of assignment
+ --> main.rs:7:8
+  |
+7 |     PI = 535.23;
+  |     -- ^
+  |     |
+  |     cannot assign to this expression
+
+
+NOTE: IT'S ADVISED TO USE CAPITAL LETTERS WHEN NAMING THE CONSTANT VARIABLES
+
