@@ -50,6 +50,7 @@ Updated value of x = 2
 Here, you can see we have successfully changed the value of the x variable. This is because we have defined the x variable using the mut keyword.
 
 RULES FOR VARIABLE NAMING
+=============================
 1. rust is case sensitive, AGE != age
 2. Variables must start with either a letter or an underscore. For example,
 	let age = 31;     	// valid and good practice
@@ -65,6 +66,7 @@ RULES FOR VARIABLE NAMING
 	let s@lary = 52352;   // invalid variable
 
 CONSTANTS
+===============
 constant is a special kind of variable whose value cannot be changed.
 In rust and similarly in C, we use the "const" keyword to create constants.
 
@@ -103,4 +105,16 @@ error[E0070]: invalid left-hand side of assignment
 
 
 NOTE: IT'S ADVISED TO USE CAPITAL LETTERS WHEN NAMING THE CONSTANT VARIABLES
+
+SHADOWING
+================
+Shadowing is the process of declaring a new variable with the same name as to an existing one.
+for example:
+fn main() {
+    let x = 5; // Original variable
+    println!("The value of x is: {}", x);
+
+    let x = "hello"; // Shadowing the original variable with a new value and type
+    println!("Now the value of x is: {}", x);
+}
 
