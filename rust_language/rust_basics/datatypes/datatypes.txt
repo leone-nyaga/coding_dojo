@@ -1,0 +1,11 @@
+DATA TYPES
+==============
+We use data types in rust to determine the value associated with the variables.
+
+Data Types In Rust
+======================
+1. Integer
+2. Floating-point
+3. Boolean
+4. Character
+
