@@ -9,3 +9,60 @@ Data Types In Rust
 3. Boolean
 4. Character
 
+INTEGER
+==========
+Data types that represent whole numbers.
+Rust has two categories of integers, i.e signed and unsigned
+
+signed
+=======
+1. i8: 8-bit signed integer (-128 to 127)
+2. i16: 16-bit signed integer (-32,768 to 32,767)
+3. i32: 32-bit signed integer (-2,147,483,648 to 2,147,483,647)
+4. i64: 64-bit signed integer (-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807)
+5.i128: 128-bit signed integer (-170,141,183,460,469,231,731,687,303,715,884,105,727 to 170,141,183,460,469,231,731,687,303,715,884,105,727)
+6. isize: Signed integer type that is the size of the pointer on the target platform (e.g., 32 bits on a 32-bit platform, 64 bits on a 64-bit platform)
+
+unsigned
+=========
+1. u8: 8-bit unsigned integer (0 to 255)
+2. u16: 16-bit unsigned integer (0 to 65,535)
+3. u32: 32-bit unsigned integer (0 to 4,294,967,295)
+4. u64: 64-bit unsigned integer (0 to 18,446,744,073,709,551,615)
+5. u128: 128-bit unsigned integer (0 to 340,282,366,920,938,463,463,374,607,431,768,211,455)
+6. usize: Unsigned integer type that is the size of the pointer on the target platform (e.g., 32 bits on a 32-bit platform, 64 bits on a 64-bit platform
+
+
+================================================================================
+By default, integer literals are inferred to be i32 unless otherwise specified.
+=================================================================================
+
+examples
+
+fn main() {
+    let x = 42; // Default to i32
+    let y: i64 = 42; // Explicitly i64
+    let z = 42u8; // Unsigned 8-bit integer
+    let w = 1_000_000; // Using underscores for readability
+    println!("x: {}, y: {}, z: {}, w: {}", x, y, z, w);
+}
+
+integer operations
+===================
+fn main() {
+    let a = 10;
+    let b = 20;
+    let sum = a + b;
+    let difference = b - a;
+    let product = a * b;
+    let quotient = b / a;
+    let remainder = b % a;
+
+    println!("sum: {}", sum);
+    println!("difference: {}", difference);
+    println!("product: {}", product);
+    println!("quotient: {}", quotient);
+    println!("remainder: {}", remainder);
+}
+
+
