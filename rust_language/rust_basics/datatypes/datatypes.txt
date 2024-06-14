@@ -65,4 +65,44 @@ fn main() {
     println!("remainder: {}", remainder);
 }
 
+FLOATING-POINTS
+=================
+Used to represent real numbers with fractional parts.
+Rust supports two main floating points:
+1. f32: single-precision floating-point number (32 bits).
+2. f64: A double-precision floating-point number (64 bits).(DEFAULT)
+
+declaration
+============
+fn main() {
+    let x = 2.5; // Default type is f64
+    println!("The value of x is: {}", x);
+
+    let y: f32 = 3.14; // Explicitly specifying f32
+    println!("The value of y is: {}", y);
+}
+
+operations
+===========
+fn main() {
+    let a = 5.0; // f64
+    let b = 2.5; // f64
+
+    let sum = a + b;
+    let difference = a - b;
+    let product = a * b;
+    let quotient = a / b;
+
+    println!("Sum: {}", sum);
+    println!("Difference: {}", difference);
+    println!("Product: {}", product);
+    println!("Quotient: {}", quotient);
+}
+
+f32 has approximately 7 decimal digits of precision, while f64 has about 15 decimal digits.
+
+BOOLEAN
+=========
+In Rust, booleans are represented by the bool type, which can have one of two values: true or false.
+Booleans are commonly used in conditional statements, logical operations, and control flow.
 
