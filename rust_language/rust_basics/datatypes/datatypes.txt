@@ -106,3 +106,14 @@ BOOLEAN
 In Rust, booleans are represented by the bool type, which can have one of two values: true or false.
 Booleans are commonly used in conditional statements, logical operations, and control flow.
 
+CHARACTER
+===========
+The character data type in Rust is used to store a character.
+For example,
+
+fn main() {
+    // char type
+    let character: char = 'z';
+
+    println!("character = {}", character);
+}
