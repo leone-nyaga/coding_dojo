@@ -1,0 +1,5 @@
+TYPE CASTING
+==============
+It's the process of converting a variable from one datatype to another.
+In rust we use the "as" keyword.
+
