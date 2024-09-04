@@ -7,5 +7,6 @@ int main(void);
 int areaOfRect(int length, int width);
 int areaOfSquare(int side);
 int areaOfTriangle(int base, int height);
+int areaOfCircle(double radius);
 
 #endif
