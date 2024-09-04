@@ -1,0 +1,20 @@
+1. i created 4 files: rect.c, circle.c, square.c, triangle.c
+2. i created their corresponding main.c files: rect-main.c, circle-main.c, square-main.c, triangle-main.c
+3. i compiled all the major C file "gcc -Wall -Werror -Wextra -pedantic -c circle.c rect.c square.c triangle.c"
+3.1 this will create files ending in ".o"
+4. i then created static library "libmensuration.a"
+4.1 this is the command "ar rcs libmensuration.a circle.o rect.o square.o triangle.o"
+4.1.1 ar: The archive command to manage archives.
+4.1.2 r: Replaces or adds the object files (circle.o, rect.o, square.o, triangle.o) into the archive (libmensuration.a).4.1.3 c: Creates the archive (libmensuration.a) if it does not exist.
+4.1.4 s: Generates an index for the archive, which helps the linker to find the symbols in the library more quickly.
+5. i Compile the Main Files with the Static Library
+5.1 for circle-main.c: gcc -Wall -Werror -Wextra -pedantic circle-main.c -L. -lmensuration -o circle_program
+5.2 for rect-main.c: gcc -Wall -Werror -Wextra -pedantic rect-main.c -L. -lmensuration -o rect_program
+5.3 for square-main.c: gcc -Wall -Werror -Wextra -pedantic square-main.c -L. -lmensuration -o square_program
+5.4 for triangle-main.c: gcc -Wall -Werror -Wextra -pedantic triangle-main.c -L. -lmensuration -o triangle_program
+the actions above will create an excecutable
+6.1 ./circle_program
+6.2./rect_program
+6.3./square_program
+6.4./triangle_program
+
