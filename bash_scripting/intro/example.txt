@@ -1,0 +1,8 @@
+The quick brown fox jumps over the lazy dog.
+BASH scripting is fun and powerful.
+This is an example line in a text file.
+Learning how to use grep is essential for file searching.
+Line number five contains no special content.
+Every line matters in this example text file.
+End of file reached. Goodbye!
+
