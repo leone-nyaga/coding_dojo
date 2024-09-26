@@ -6,5 +6,5 @@
 #include <unistd.h>
 #include <fcntl.h>
 
-
+void createFile(const char *filename);
 #endif
