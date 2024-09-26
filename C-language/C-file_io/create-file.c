@@ -4,7 +4,7 @@
  * createFile - function to create a file
  * @filename: name of file to be created
  *
- * Return:
+ * Return: 0
  */
 
 void createFile(const char *filename)
@@ -20,6 +20,12 @@ void createFile(const char *filename)
 	fclose(file);
 	printf("File '%s' opened successfully\n", filename);
 }
+
+/**
+ * main - entry point
+ *
+ * Return: 0
+ */
 
 int main(void)
 {
