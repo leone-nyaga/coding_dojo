@@ -4,7 +4,7 @@
  * appendToFile - Function that appends to a file
  * @filename: pointer to filename
  * @text: pointer to the text being appended
- * Return: 0
+ * Return: void
  */
 
 void appendToFile(const char *filename, const char *text)
