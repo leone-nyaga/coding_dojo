@@ -35,6 +35,6 @@ void appendToFile(const char *filename, const char *text)
  */
 int main(void)
 {
-	appendToFile("hello.txt", "/nThis is an appended text/n");
+	appendToFile("hello.txt", "/nThis is an appended text");
 	return(0);
 }
