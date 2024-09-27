@@ -6,8 +6,10 @@
 #include <unistd.h>
 #include <fcntl.h>
 
+int main(void);
 void createFile(const char *filename);
 void createAndWriteFile(const char *filename, const char *text);
 void appendToFile(const char *filename, const char *text);
+void readFile(const char *filename);
 
 #endif
