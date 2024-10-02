@@ -15,4 +15,12 @@ struct Student
 	float grade;
 };
 
+/**
+ * Student_t - alias for the struct Student
+ */
+typedef Student Student_t;
+
+void displayStudent(struct Student student);
 void printStudent(struct Student student);
+
+#endif
