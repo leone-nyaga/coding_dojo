@@ -14,3 +14,5 @@ struct Student
 	int age;
 	float grade;
 };
+
+void printStudent(struct Student student);
