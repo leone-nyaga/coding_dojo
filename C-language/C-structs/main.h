@@ -18,9 +18,9 @@ struct Student
 /**
  * Student_t - alias for the struct Student
  */
-typedef Student Student_t;
+typedef struct Student Student_t;
 
 void displayStudent(struct Student student);
 void printStudent(struct Student student);
+void showStudent(Student_t student);
 
-#endif
