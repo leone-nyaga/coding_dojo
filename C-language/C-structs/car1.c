@@ -1,4 +1,8 @@
 #include "main.h"
+/**
+ * printCar - function that prints car details
+ * @car: car details
+ */
 
 void printCar(Car car)
 {
@@ -8,6 +12,11 @@ void printCar(Car car)
 	printf("Car Year Of Manufacture: %d\n", car.year);
 	printf("Car Mileage: %.2f km\n", car.mileage);
 }
+
+/**
+ * main - entry point
+ * Return: 0
+ */
 
 int main(void)
 {
