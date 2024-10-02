@@ -40,4 +40,5 @@ typedef struct
 void displayStudent(struct Student student);
 void printStudent(struct Student student);
 void showStudent(Student_t student);
+void printCar(Car car);
 
