@@ -1,3 +1,6 @@
+#ifndef MAIN_H
+#define MAIN_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -42,3 +45,4 @@ void printStudent(struct Student student);
 void showStudent(Student_t student);
 void printCar(Car car);
 
+#endif
