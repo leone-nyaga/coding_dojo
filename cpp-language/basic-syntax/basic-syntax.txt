@@ -82,4 +82,24 @@ C++ VARIABLES
 C++ is strongly typed language, and requires every variable to be declared with its type before its first use.
 This informs the compiler the size to reserve in memory for the variable and how to interpret its value. 
 Syntax: datatype variable;
-e.g. int a;, int a, b, c;, float num; 
+e.g. int a;, int a, b, c;, float num;
+
+TABLE
+------------------------------------------------------------------------------
+|DATATYPE	|SIZE	 |DESCRIPTION                                         |
+------------------------------------------------------------------------------
+|int		|4 bytes |Integer values (positive or negative whole numbers) |
+-------------------------------------------------------------------------------
+|float		|4 bytes |Floating-point numbers (single precision)           |
+-------------------------------------------------------------------------------
+|double		|8 bytes |Double-precision floating-point numbers             |
+-------------------------------------------------------------------------------
+|char		|1 byte  |Stores a single character or ASCII value            |
+-------------------------------------------------------------------------------
+|bool		|1 byte  |Stores true or false values                         |
+-------------------------------------------------------------------------------
+|void		|No storage|Used to specify no value or empty type            |
+-------------------------------------------------------------------------------
+|wchar_t	|2 or 4 bytes|Wide character type for Unicode characters      |
+-------------------------------------------------------------------------------
+
