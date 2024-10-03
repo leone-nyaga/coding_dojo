@@ -44,4 +44,37 @@ Run "./filename" to run the program.
 
 STRUCTURE OF A PROGRAM
 =======================
+(1) /* My first C++ program */
+(2) #include <iostream>
+(3) int main()
+(4) {
+(5) std::cout << "Hello, World!"";
+(6) }
+
+1. Comments
+------------
+A comment is used to display additional information about the program.
+A comment does not contain any programming logic.
+you can comment like /* */ or //
+
+2. #include
+------------
+This is a preprocessor directive.
+The #include directive tells the compiler to include the content of a file in the source code.
+For example, #include<iostream> tells the compiler to include the standard iostream file which contains declarations of all the standard input/output library functions.
+
+3. int main()
+-------------- 
+The main() function is the entry point of every C++ program, no matter where the function is located in the program.
+
+4. and 6. Braces
+-----------------
+These hold blocks of code.
+
+5. std::cout << "Hello, World!";
+---------------------------------
+std::cout is an instance of the std::ostream class, that is used to display output on the screen.
+Everything followed by the character << in double quotes ” ” is displayed on the output device.
+The semi-colon character at the end of the statement is used to indicate that the statement is ending there. 
+
 
