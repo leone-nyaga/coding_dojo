@@ -7,6 +7,6 @@ int main()
 	b = 2;
 	a = a + 1;
 	result = a - b;
-	std::cout << result << std::endl;
+	std::cout << "The result is " << result << std::endl;
 	return (0);
 }
