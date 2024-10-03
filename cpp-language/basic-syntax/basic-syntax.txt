@@ -77,4 +77,9 @@ std::cout is an instance of the std::ostream class, that is used to display outp
 Everything followed by the character << in double quotes ” ” is displayed on the output device.
 The semi-colon character at the end of the statement is used to indicate that the statement is ending there. 
 
-
+C++ VARIABLES
+==============
+C++ is strongly typed language, and requires every variable to be declared with its type before its first use.
+This informs the compiler the size to reserve in memory for the variable and how to interpret its value. 
+Syntax: datatype variable;
+e.g. int a;, int a, b, c;, float num; 
