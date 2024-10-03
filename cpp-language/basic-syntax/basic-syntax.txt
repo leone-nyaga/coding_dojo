@@ -6,33 +6,33 @@ C++ offers additional features to C like Object Oriented Programming.
 
 DIFFERENCE BETWEEN C AND C++
 =============================
-Feature				C				C++
---------------------------------------------------------------------------------------|
-Type		|Procedural Programming language|Supports both Procedural and         |
-		|				| Object Oriented Programming         |
---------------------------------------------------------------------------------------|
-Paradigm        |Procedural only                |supports OOP, Procedural and         |
-		|				|Global Programming                   |
---------------------------------------------------------------------------------------|
-Data Security   |Less secure because it's       |More Secure because of encapsulation,|
-                |Procedural                     |which hides data                     |
---------------------------------------------------------------------------------------|
-Classes and     |Does not support OOP           |Supports classes and objects as its  |
-Objects         |                               |object oriented                      |
---------------------------------------------------------------------------------------|
-Memory allocation|Manually allocates memory using|supports both manual(malloc, free)and|
-                 |malloc and free                |automatic(constructors/destructors and|
-                 |                               |new/delete)                          |
-----------------------------------------------------------------------------------------
-exception       |Does not support exception     |Supports excecution handling using try|
-handling        |handling                       |, catch, throw                        |
-----------------------------------------------------------------------------------------
-Compartibility  |Generally limited to C code    |Backwards compartibilty with C, allowing|
-                |                               |C code to run in C++ programs           |
-------------------------------------------------------------------------------------------
-Template        |No support for templates       |Supports templates enabling generic   |
-support         |                               |programming                           |
-----------------------------------------------------------------------------------------
+|Feature				C				C++
+|--------------------------------------------------------------------------------------|
+|Type		|Procedural Programming language|Supports both Procedural and         |
+|		|				| Object Oriented Programming         |
+|--------------------------------------------------------------------------------------|
+|Paradigm        |Procedural only                |supports OOP, Procedural and         |
+|		 |				|Global Programming                   |
+|--------------------------------------------------------------------------------------|
+|Data Security   |Less secure because it's       |More Secure because of encapsulation,|
+|                |Procedural                     |which hides data                     |
+|--------------------------------------------------------------------------------------|
+|Classes and     |Does not support OOP           |Supports classes and objects as its  |
+|Objects         |                               |object oriented                      |
+|--------------------------------------------------------------------------------------|
+|Memory allocation|Manually allocates memory using|supports both manual(malloc, free)and|
+|                 |malloc and free                |automatic(constructors/destructors and|
+|                 |                               |new/delete)                          |
+|----------------------------------------------------------------------------------------
+|exception       |Does not support exception     |Supports excecution handling using try|
+|handling        |handling                       |, catch, throw                        |
+|----------------------------------------------------------------------------------------
+|Compartibility  |Generally limited to C code    |Backwards compartibilty with C, allowing|
+|                |                               |C code to run in C++ programs           |
+|------------------------------------------------------------------------------------------
+|Template        |No support for templates       |Supports templates enabling generic   |
+|support         |                               |programming                           |
+|----------------------------------------------------------------------------------------
 
 COMPLILER
 ==========
