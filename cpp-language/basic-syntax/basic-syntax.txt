@@ -34,4 +34,14 @@ Template        |No support for templates       |Supports templates enabling gen
 support         |                               |programming                           |
 ----------------------------------------------------------------------------------------
 
+COMPLILER
+==========
+Computers understand only one language and that language consists of sets of instructions made of ones and zeros.
+This computer language is appropriately called machine language.
+To compile a C++ program, use "g++ filename.cpp -o filename".
+C++ programs end with the ".cpp" extension.
+Run "./filename" to run the program.
+
+STRUCTURE OF A PROGRAM
+=======================
 
