@@ -11,3 +11,9 @@ Feature				C				C++
 Type		|Procedural Programming language|Supports both Procedural and 
 		|				| Object Oriented Programming
 -------------------------------------------------------------------------------
+Paradigm        |Procedural only                |supports OOP, Procedural and 
+		|				|Global Programming
+--------------------------------------------------------------------------------
+Data Security   |Less secure because it's       |More Secure because of encapsulation,
+                |Procedural                     |which hides data
+---------------------------------------------------------------------------------------
