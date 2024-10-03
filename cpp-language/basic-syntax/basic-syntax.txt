@@ -1,0 +1,13 @@
+C++
+===
+C++ is a middle level language developed as an extension for C.
+Was created by Bjarne Strousup at Bell labs in the early 1980s.
+C++ offers additional features to C like Object Oriented Programming.
+
+DIFFERENCE BETWEEN C AND C++
+=============================
+Feature				C				C++
+------------------------------------------------------------------------------
+Type		|Procedural Programming language|Supports both Procedural and 
+		|				| Object Oriented Programming
+-------------------------------------------------------------------------------
