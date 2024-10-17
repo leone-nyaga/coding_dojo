@@ -1,7 +1,9 @@
-#TypeScript Hello World!
+# TypeScript Hello World!
 
-+ Let's create a file called "hello.ts"
-+ The contents of the file are:
+## 1. Create the `hello.ts` file
+
+Let's create a file called `hello.ts` with the following contents:
+
 ```typescript
 function greet(): void {
   console.log("HELLO TYPESCRIPT!");
@@ -9,9 +11,6 @@ function greet(): void {
 
 greet();
 
-+ we then compile the typescript file:
-tsc hello.ts
-+ this will convert the typescrit file to a javascript file.
-+ if you ls into your repo, you'll see two files one for ts and the other for js.
-+ run ```node hello.js``` for the output:
-```HELLO TYPESCRIPT!
+## 2. Compile the TypeScript file
+
+
