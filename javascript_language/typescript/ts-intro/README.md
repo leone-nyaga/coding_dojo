@@ -10,7 +10,27 @@ function greet(): void {
 }
 
 greet();
+```
 
 ## 2. Compile the TypeScript file
 
+We then compile the TypeScript file using the tsc command:
+```
+tsc hello.ts
+```
 
+## 3. Verify the generated files
+If you run ls in your repo, you'll see two files: one for TypeScript (hello.ts) and the other for JavaScript (hello.js):``
+ls
+``
+
+## 4. Run the JavaScript file
+Finally, run the generated JavaScript file using node:
+```bash
+node hello.js
+```
+
+## Output
+```
+HELLO TYPESCRIPT!
+```
