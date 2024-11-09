@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+from mensuration import Mensuration
+
 class Rectangle(Mensuration):
 
     def __init__(self, side._x: float, side._y: float) -> None:
