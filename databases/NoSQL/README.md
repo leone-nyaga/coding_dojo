@@ -1,1 +1,5 @@
-Training on non relational database management systems using Mongodb and Redis with languages python and javascript
+## Training on non relational database management systems using Mongodb and Redis with languages python and javascript
+
+### HOW I INSTALL MONGODB ON MY WSL UBUNTU 22.04
+
+
