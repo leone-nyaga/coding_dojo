@@ -29,3 +29,22 @@ sudo apt update
 ```bash
 sudo apt install -y mongodb-org
 ```
+
+3. Start MongoDB: After MongoDB is installed, you can start it by running:
+```bash
+sudo service mongod start
+```
+- Alternatively, you can use systemctl if it's supported in your WSL setup:
+```bash
+sudo systemctl start mongod
+```
+
+4. Verify that MongoDB is running: You can check if MongoDB is running by typing:
+```bash
+ps aux | grep mongod
+```
+
+5. Access the MongoDB shell: To interact with MongoDB, you can open the MongoDB shell with the mongo command:
+```bash
+mongo
+```
