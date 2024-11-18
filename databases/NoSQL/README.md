@@ -9,3 +9,7 @@ sudo apt update
 
 2. Install MongoDB: To install MongoDB, you'll first need to add the official MongoDB repository.
    Here’s how:
+- Install dependencies:
+```bash
+sudo apt install -y gnupg
+```
