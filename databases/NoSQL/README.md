@@ -13,3 +13,12 @@ sudo apt update
 ```bash
 sudo apt install -y gnupg
 ```
+- Add the MongoDB GPG key: This allows the system to authenticate the MongoDB packages.
+```bash
+wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+```
+- Add the MongoDB repository: This tells your system where to find MongoDB packages.
+```bash
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+```
+
