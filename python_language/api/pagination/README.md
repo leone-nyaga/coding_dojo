@@ -1,4 +1,5 @@
 #PAGINATION
+
 Pagination is a technique used in computing and web development to divide a large data set into smaller more manageable segaments called pages.
 
 ####syntax
