@@ -1,8 +1,8 @@
-#PAGINATION
+# PAGINATION
 
 Pagination is a technique used in computing and web development to divide a large data set into smaller more manageable segaments called pages.
 
-####syntax
+#### syntax
 ```python
 def paginate(items, page_size, page_number):
     start_index = (page_number - 1) * page_size
