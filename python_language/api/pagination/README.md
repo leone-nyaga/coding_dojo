@@ -9,3 +9,10 @@ def paginate(items, page_size, page_number):
     end_index = start_index + page_size
     return items[start_index:end_index]
 ```
+
+#### Example
+
+Let's have a list of numbers from 0 - 15
+```python
+num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+```
