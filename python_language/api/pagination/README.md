@@ -48,3 +48,36 @@ paginate(num, 5, 2) # returns [ 5, 6, 7, 8, 9 ]
 ```python
 paginate(num, 5, 3) # return [ 10, 11, 12, 13, 14 ]
 ```
+
+4. The fourth and last page(page_number = 4)
++ start index: (4 - 1) * 5 = 15
++ end index: 15 + 5 = 15
++ this means the function will slice the list from index 15 to 20 (but here it will print "15" since its the only item left):
++ page 4 will contain ```[15]```
++ Calling the function:
+```python
+paginate(num, 5, 4) # return [ 15 ]
+```
+
+## SUMMARY CODE
+
+```python
+def paginate(items, page_size, page_number):
+    start_index = (page_number - 1) * page_size
+    end_index = start_index + page_size
+    return items[start_index:end_index]
+
+# List of numbers from 0 to 15
+num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+# Paginate and print all 4 pages
+for page_number in range(1, 5):  # Page 1 to 4
+    print(f"Page {page_number}: {paginate(num, 5, page_number)}")
+```
+The output will be:
+```less
+Page 1: [0, 1, 2, 3, 4]
+Page 2: [5, 6, 7, 8, 9]
+Page 3: [10, 11, 12, 13, 14]
+Page 4: [15]
+```
