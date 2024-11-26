@@ -47,7 +47,11 @@ The flags you'll likely use are:
 |Flag	|Description					|File gets created if it doesn't exist|
 |:------|:----------------------------------------------|:------------------------------------|
 |'r+'   |This flag opens the file for reading and writing|	No			      |
-|'w+'	|This flag opens the file for reading and writing and it also positions the stream at the beginning of the file|	YES	|
+|'w+'	|This flag opens the file for reading and writing and it also positions the stream at the beginning of the file|	Yes	|
+|'a'	|This flag opens the file for writing and it also positions the stream at the end of the file|	Yes	|
+|'a+'	|This flag opens the file for reading and writing and it also positions the stream at the end of the file|	Yes	|
+
+
 
 
 
