@@ -37,4 +37,10 @@ try {
 }
 ```
 
+You can modify the default by specifying a flag:
+```node
+fs.writeFile('/Users/joe/test.txt', content, { flag: 'a+' }, err => {});
+```
+
+The flags you'll likely use are:
 
