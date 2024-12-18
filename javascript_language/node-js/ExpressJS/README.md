@@ -28,3 +28,20 @@ Install ```nodemon``` in your project. nodemon is a tool that helps develop Node
 ```
 This will install directly in the dev section in the ```package.json``` file.
 
+## HELLO WORLD
+
+```javascript
+const express = require('express'); /* common method of importing express module in a file */
+const app = express(); /* creates and returns an Express application instance, stored in the app variable */
+
+/**
+ * '/hello' is the route of the website http://localhost:5000
+ * req: request represents incoming HTTP requests
+ * res: response is the outgoing HTTP response used to send data back to the client
+/
+app.get('/hello', (req, res) => {
+  res.send('HELLO WORLD'); /* send() is a method on the res object that sends the response body */
+});
+
+app.listen(5000);
+``` 
