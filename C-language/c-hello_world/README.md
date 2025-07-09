@@ -105,3 +105,25 @@ gcc -c source.s -o source.o
   + Resolves all function calls, global variables, etc.
 
   + Produces the final executable binary.
+
++ Command:
+
+```bash
+gcc source.o -o program
+```
+
+  + Output: program (executable)
+
++ Notes:
+
+  + This is where errors like "undefined reference to printf" occur if the linker can't find the needed function.
+
+## summary table
+
+| Stage         | File Extension | Flag      | Output         | Description                           |
+|---------------|----------------|-----------|----------------|---------------------------------------|
+| Preprocessing | `.i`           | `-E`      | Preprocessed C | Handles `#include`, `#define`, etc.   |
+| Compilation   | `.s`           | `-S`      | Assembly code  | Converts C to assembly                |
+| Assembly      | `.o`           | `-c`      | Object file    | Converts assembly to machine code     |
+| Linking       | (none)         | (default) | Executable     | Combines all `.o` into a program      |
+
