@@ -127,3 +127,24 @@ gcc source.o -o program
 | Assembly      | `.o`           | `-c`      | Object file    | Converts assembly to machine code     |
 | Linking       | (none)         | (default) | Executable     | Combines all `.o` into a program      |
 
+
+## Full Example (with all flags)
+
+```c
+#include <stdio.h>
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+```
+
+You could run the whole compilation process like this:
+
+```bash
+gcc -E main.c -o main.i        # Preprocess
+gcc -S main.i -o main.s        # Compile to Assembly
+gcc -c main.s -o main.o        # Assemble to Object File
+gcc main.o -o main             # Link to Executable
+```
+
+
