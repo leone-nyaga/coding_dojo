@@ -146,5 +146,5 @@ gcc -S main.i -o main.s        # Compile to Assembly
 gcc -c main.s -o main.o        # Assemble to Object File
 gcc main.o -o main             # Link to Executable
 ```
-
+to view, use the cat command
 
