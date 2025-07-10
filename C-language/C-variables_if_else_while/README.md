@@ -164,4 +164,107 @@ int main() {
 | Storage Class  | Lifetime and visibility: `auto`, `static`, `extern` |
 | Constants      | `const` variables cannot be changed                 |
 
+## Integer Types in C
 
+An integer type in C represents whole numbers (no decimal points).
+C offers several types of integers, giving you control over:
+
++ Size (how many bytes it uses in memory)
+
++ Sign (whether it allows negative numbers or only positives)
+
++ Range (based on the above two)
+
+### Base Integer Types
+
+The C standard defines these basic signed types:
+
++ short or short int
+
++ int
+
++ long or long int
+
++ long long or long long int
+
+Each has a corresponding unsigned type:
+
++ unsigned short
+
++ unsigned int
+
++ unsigned long
+
++ unsigned long long
+
+### Typical Sizes and Ranges
+
+(Actual sizes may vary by platform — this assumes 64-bit GCC)
+
+| Type        | Size (bytes) | Signed Range                                            | Unsigned Range                  |
+| ----------- | ------------ | ------------------------------------------------------- | ------------------------------- |
+| `short`     | 2            | -32,768 to 32,767                                       | 0 to 65,535                     |
+| `int`       | 4            | -2,147,483,648 to 2,147,483,647                         | 0 to 4,294,967,295              |
+| `long`      | 8            | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | 0 to 18,446,744,073,709,551,615 |
+| `long long` | 8            | Same as `long`                                          | Same as `unsigned long`         |
+
+
+### Signed vs Unsigned
+
++ Signed
+
+  + Default type (int = signed int)
+
+  + Can hold both negative and positive values.
+
+  + Example: int x = -5;
+
++ unsigned
+
+  + Only positive values (including zero).
+
+  + Has twice the positive range of the signed equivalent.
+
+  + Useful for bitwise operations, memory sizes, array indices.
+
+  + Example: unsigned int size = 1024;
+
+
+## format specifiers 
+
+| Format Specifier | Data Type                  | Description                                         | Example Value         |
+|------------------|----------------------------|-----------------------------------------------------|------------------------|
+| `%d` or `%i`     | `int`                      | Signed decimal integer                              | `-42`, `0`, `100`      |
+| `%u`             | `unsigned int`             | Unsigned decimal integer                            | `42`, `4000000000`     |
+| `%hd`            | `short int`                | Signed short integer                                | `-32768`, `32767`      |
+| `%hu`            | `unsigned short int`       | Unsigned short integer                              | `0`, `65535`           |
+| `%ld`            | `long int`                 | Signed long integer                                 | `-9223372036854775808` |
+| `%lu`            | `unsigned long int`        | Unsigned long integer                               | `18446744073709551615` |
+| `%lld`           | `long long int`            | Signed long long integer                            | Very large ints        |
+| `%llu`           | `unsigned long long int`   | Unsigned long long integer                          | Very large ints        |
+| `%x`             | `unsigned int`             | Hexadecimal (lowercase)                             | `1a3f`                 |
+| `%X`             | `unsigned int`             | Hexadecimal (UPPERCASE)                             | `1A3F`                 |
+| `%o`             | `unsigned int`             | Octal representation                                | `0755`, `0177`         |
+| `%c`             | `char`                     | Single character                                     | `'A'`, `'z'`           |
+| `%s`             | `char *` (string)          | Null-terminated string                              | `"Hello, world!"`      |
+| `%p`             | `void *` (pointer)         | Memory address                                      | `0x7ffee4c3`           |
+| `%f`             | `float`, `double`          | Decimal floating point (fixed-point)                | `3.14`, `0.001`        |
+| `%e`             | `float`, `double`          | Scientific notation (lowercase)                     | `1.23e+10`             |
+| `%E`             | `float`, `double`          | Scientific notation (uppercase)                     | `1.23E+10`             |
+| `%g`             | `float`, `double`          | Auto format: `%e` or `%f`, depending on value       | `0.0001`, `100.0`      |
+| `%G`             | `float`, `double`          | Auto format, uppercase (`%E` or `%F`)               | `1.23E+10`             |
+| `%Lf`            | `long double`              | Long double floating point                          | Extended precision     |
+| `%%`             | N/A                        | Prints a literal `%` character                      | `%`                    |
+
+
+### Notes:
+
++ %d and %i are identical in printf(), but behave differently in scanf() (%i auto-detects base like octal/hex).
+
++ %p is used for pointer values — addresses in memory.
+
++ %f, %e, and %g are float/double, but %Lf is for long double.
+
++ Hexadecimal (%x, %X) and octal (%o) are often used in systems or bit-level programming.
+
++ You can combine specifiers with flags like width, padding, precision: Example: %.2f, %04d, %10s, etc.
