@@ -431,4 +431,49 @@ if (num > 0) {
 }
 ```
 
+## while Loop in C
+
+The while loop is a control flow statement that repeats a block of code as long as a specified condition is true.
+
++ Syntax
+
+```c
+while (condition) {
+    // code to execute while condition is true
+}
+```
+
+  + The condition is checked before each loop iteration.
+
+  + If the condition is true, the code inside runs.
+
+  + If the condition is false, the loop exits immediately — even before the first run
+
+### Simple Example
+
+```c
+#include <stdio.h>
+
+int main() {
+    int i = 1;
+
+    while (i <= 5) {
+        printf("i = %d\n", i);
+        i++;
+    }
+
+    return 0;
+}
+```
+
+Output:
+
+```bash
+i = 1
+i = 2
+i = 3
+i = 4
+i = 5
+```
+
 
