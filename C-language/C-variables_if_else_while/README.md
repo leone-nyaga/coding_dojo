@@ -268,3 +268,92 @@ Each has a corresponding unsigned type:
 + Hexadecimal (%x, %X) and octal (%o) are often used in systems or bit-level programming.
 
 + You can combine specifiers with flags like width, padding, precision: Example: %.2f, %04d, %10s, etc.
+
+## Relational Operators in C
+
+Relational operators in C are used to compare two values or expressions.
+
+The result of a relational operation is either:
+
++ 1 (true) if the relation is true
+
++ 0 (false) if the relation is false
+
+They are commonly used in conditional statements like if, while, for, etc.
+
+### List of Relational Operators
+
+| Operator | Name                  | Description                                | Example  | Result |
+| -------- | --------------------- | ------------------------------------------ | -------- | ------ |
+| `>`      | Greater than          | True if left operand is greater than right | `5 > 3`  | `1`    |
+| `<`      | Less than             | True if left operand is less than right    | `2 < 4`  | `1`    |
+| `>=`     | Greater than or equal | True if left operand is greater or equal   | `6 >= 6` | `1`    |
+| `<=`     | Less than or equal    | True if left operand is less or equal      | `3 <= 2` | `0`    |
+| `==`     | Equal to              | True if both operands are equal            | `7 == 7` | `1`    |
+| `!=`     | Not equal to          | True if operands are **not equal**         | `5 != 4` | `1`    |
+
+
+### Example
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a = 10, b = 20;
+
+    printf("a > b: %d\n", a > b);   // 0
+    printf("a < b: %d\n", a < b);   // 1
+    printf("a == b: %d\n", a == b); // 0
+    printf("a != b: %d\n", a != b); // 1
+    printf("a >= b: %d\n", a >= b); // 0
+    printf("a <= b: %d\n", a <= b); // 1
+
+    return 0;
+}
+```
+
+
+
+## if, else if and else
+
+In C programming, conditional statements like if, else if, and else are used to make decisions based on certain conditions.
+
+### Basic Syntax
+
+```c
+if (condition) {
+    // code block executed if condition is true
+} else if (another_condition) {
+    // code block executed if another_condition is true
+} else {
+    // code block executed if none of the above conditions are true
+}
+```
+
++ EXAMPLE
+
+```c
+int temp = 10;
+
+if (temp > 30) {
+    printf("Hot\n");
+} else if (temp > 20) {
+    printf("Warm\n");
+} else {
+    printf("Cold\n");
+}
+```
+
++ Nested if
+
+```c
+int num = 10;
+
+if (num > 0) {
+    if (num % 2 == 0) {
+        printf("Positive even number\n");
+    }
+}
+```
+
+
