@@ -312,7 +312,82 @@ int main() {
 }
 ```
 
+## Logical Operators in C
 
+Logical operators are used to combine or invert Boolean expressions.
+
+They help control program flow, especially in if, while, and for statements.
+
+Each logical expression evaluates to:
+
++ 1 (true) if the condition is satisfied
+
++ 0 (false) if not
+
+### List of Logical Operators
+
+| Operator | Name        | Description                                | Example              | Result                                   |           |   |           |     |
+| -------- | ----------- | ------------------------------------------ | -------------------- | ---------------------------------------- | --------- | - | --------- | --- |
+| `&&`     | Logical AND | True if **both** operands are true         | `(5 > 2) && (4 < 6)` | `1`                                      |           |   |           |     |
+| \`       |             | \`                                         | Logical OR           | True if **at least one** operand is true | \`(5 < 2) |   | (4 < 6)\` | `1` |
+| `!`      | Logical NOT | **Inverts** the truth value of the operand | `!(5 == 5)`          | `0`                                      |           |   |           |     |
+
+
+### Example Code in C
+
+#include <stdio.h>
+
+int main() {
+    int a = 5, b = 10;
+
+    printf("a > 0 && b > 0: %d\n", a > 0 && b > 0);  // 1 (true)
+    printf("a < 0 || b > 0: %d\n", a < 0 || b > 0);  // 1 (true)
+    printf("!(a == b): %d\n", !(a == b));            // 1 (true)
+
+    return 0;
+}
+
+### Explanation
+
++ && (AND)
+
+Both MUST must be true.
+
+```c
+if (score >= 50 && score <= 100) {
+    printf("Valid score.\n");
+}
+```
+
++ || (OR)
+
+At least one condition must be true:
+
+```c
+if (age < 18 || age > 60) {
+    printf("Not eligible for this offer.\n");
+}
+```
+
++ ! (NOT)
+
+Inverts the result:
+
+```c
+if (!loggedIn) {
+    printf("Please log in.\n");
+}
+```
+
+### Operator Precedence (from highest to lowest)
+
+1. ! (NOT)
+
+2. && (AND)
+
+3. || (OR)
+
+Use parentheses () to group expressions and avoid confusion.
 
 ## if, else if and else
 
