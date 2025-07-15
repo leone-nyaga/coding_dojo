@@ -428,5 +428,40 @@ output
 ...
 ```
 
+### Prints the alphabet 10 times
 
+```
+#include <stdio.h>
+
+int main()
+{
+    int times = 0;
+    
+    while (times <= 9)
+    {
+        for (char alph = 'A'; alph <= 'Z'; alph++)
+        {
+            printf("%c", alph);
+        }
+        times++;
+        printf("\n");
+    }
+    return(0);
+}
+```
+
+output
+
+```bash
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+```
 
