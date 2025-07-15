@@ -1,2 +1,0 @@
-Hello, world!/nThis is an appended text/n'/n'This is an appended text'/n'
-/nThis is an appended text
