@@ -430,7 +430,7 @@ output
 
 ### Prints the alphabet 10 times
 
-```
+```c
 #include <stdio.h>
 
 int main()
