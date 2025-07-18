@@ -42,4 +42,47 @@ Change your code — then test again to be sure it’s really fixed.
 
 Ask yourself: Why did this happen? How can I prevent similar bugs later?
 
+## RUBBER DUCKING
+
+Rubber ducking (short for rubber duck debugging) is a technique where you explain your code or problem out loud, step by step, as if you're teaching or describing it to someone else — often a rubber duck 🐥 on your desk.
+
+### Why It's Called That
+
+The term comes from the book "The Pragmatic Programmer" where a developer kept a rubber duck on their desk and would explain their code to it when they got stuck.
+
+Just by talking it through, they often figured out the problem on their own — without needing anyone else's help.
+
+### How Rubber Ducking Works
+
+1. Pretend the duck doesn’t know anything.
+
+2. Start from the top of your code.
+
+3. Explain what each part is supposed to do.
+
+4. Keep going until either:
+
+  + You spot the bug,
+
+  + Or you realize your logic isn’t doing what you thought.
+
+### Example
+
+Let’s say your program is supposed to add two numbers but it gives the wrong result.
+
+You say:
+
+** "Okay duck, I'm calling add(5, 3). That should give 8. But I'm getting 2. Hmm... Let me look at the function. It says return a - b. Oh! I’m subtracting, not adding. There’s the problem!" **
+
+The duck didn’t say a word, but just explaining it out loud helped you see the mistake.
+
+### so rubber ducking is
+
+| Term               | Meaning                                         |
+| ------------------ | ----------------------------------------------- |
+| **Rubber ducking** | Explaining your code out loud to catch mistakes |
+| **Why it works**   | Forces you to slow down and think clearly       |
+| **Who it helps**   | Everyone from beginners to expert programmers   |
+
+
 
