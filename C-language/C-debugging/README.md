@@ -72,7 +72,7 @@ Let’s say your program is supposed to add two numbers but it gives the wrong r
 
 You say:
 
-** "Okay duck, I'm calling add(5, 3). That should give 8. But I'm getting 2. Hmm... Let me look at the function. It says return a - b. Oh! I’m subtracting, not adding. There’s the problem!" **
+**"Okay duck, I'm calling add(5, 3). That should give 8. But I'm getting 2. Hmm... Let me look at the function. It says return a - b. Oh! I’m subtracting, not adding. There’s the problem!"**
 
 The duck didn’t say a word, but just explaining it out loud helped you see the mistake.
 
