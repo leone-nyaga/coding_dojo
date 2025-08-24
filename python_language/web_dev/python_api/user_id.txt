@@ -1,9 +1,0 @@
-Question:
-Write a Python script that, using the JSONPlaceholder API("https://jsonplaceholder.typicode.com/"), retrieves information about a specific user based on their user ID. The script should prompt the user to enter a user ID, make a request to the API, and display relevant information about that user.
-
-Requirements:
-
-1. Use the requests module for making API requests.
-2. Prompt the user to enter a user ID.
-3. Make a request to the JSONPlaceholder API to fetch information about the specified user.
-4. Display relevant information about the user.
