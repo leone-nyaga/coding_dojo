@@ -155,4 +155,104 @@ def greet(name):
 print("Hello,", name)  # ❌ This will cause an IndentationError
 ```
 
+### Python variables
+
+Python variables are the reserved memory locations used to store values with in a Python Program. This means that when you create a variable you reserve some space in the memory.
+
+Based on the data type of a variable, memory space is allocated to it. Therefore, by assigning different data types to Python variables, you can store integers, decimals or characters in these variables.
+
+### Creating Python Variables
+
+Python variables do not need explicit declaration to reserve memory space or you can say to create a variable. A Python variable is created automatically when you assign a value to it. The equal sign (=) is used to assign values to variables.
+
+The operand to the left of the = operator is the name of the variable and the operand to the right of the = operator is the value stored in the variable. For example −
+
+```python
+counter = 100          # Creates an integer variable
+miles   = 1000.0       # Creates a floating point variable
+name    = "Zara Ali"   # Creates a string variable
+```
+
+Once we create a Python variable and assign a value to it, we can print it using print() function. Following is the extension of previous example and shows how to print different variables in Python:
+
+```python
+counter = 100          # Creates an integer variable
+miles   = 1000.0       # Creates a floating point variable
+name    = "Zara Ali"   # Creates a string variable
+
+print (counter)
+print (miles)
+print (name)
+```
+
+Here, 100, 1000.0 and "Zara Ali" are the values assigned to counter, miles, and name variables, respectively. When running the above Python program, this produces the following result −
+
+```bash
+100
+1000.0
+Zara Ali
+```
+
+### Getting Type of a Variable
+
+You can get the data type of a Python variable using the python built-in function type() as follows.
+
+```python
+x = "Zara"
+y =  10
+z =  10.10
+
+print(type(x))
+print(type(y))
+print(type(z))
+```
+
+Output
+
+```bash
+<class 'str'>
+<class 'int'>
+<class 'float'>
+```
+
+### Python casting
+
+Casting (or type conversion) is the process of changing a value from one data type to another.
+
+For example:
+
++ Turning a string like "123" into an integer 123
++ Turning an integer into a float
++ Turning a number into a string
+
+### :spanner: Common Casting Functions in Python
+
+| Type You Want    | Use This Function | Example                  |
+| ---------------- | ----------------- | ------------------------ |
+| Integer (`int`)  | `int(value)`      | `int("5")` → `5`         |
+| Float (`float`)  | `float(value)`    | `float("3.14")` → `3.14` |
+| String (`str`)   | `str(value)`      | `str(42)` → `"42"`       |
+| Boolean (`bool`) | `bool(value)`     | `bool(1)` → `True`       |
+
+Example
+
+```python
+# String to int
+x = "123"
+num = int(x)  # Now num is an integer 123
+
+# Int to string
+age = 30
+text = str(age)  # Now text is the string "30"
+
+# Float to int (truncates decimal)
+pi = 3.14
+whole = int(pi)  # 3
+
+# Int to float
+a = 10
+b = float(a)  # 10.0
+```
+
+
 
