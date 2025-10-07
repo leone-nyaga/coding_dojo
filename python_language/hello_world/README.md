@@ -225,7 +225,7 @@ For example:
 + Turning an integer into a float
 + Turning a number into a string
 
-### :spanner: Common Casting Functions in Python
+### :wrench: Common Casting Functions in Python
 
 | Type You Want    | Use This Function | Example                  |
 | ---------------- | ----------------- | ------------------------ |
