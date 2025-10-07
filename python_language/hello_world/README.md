@@ -515,3 +515,71 @@ Check if two variables point to the same object (not just same value):
 | Shift Right | `>>`   | `a >> 1` |    |    |
 
 
+## Comments
+
+### :memo: What Are Comments?
+
+📝 What Are Comments?
+
+Comments are lines in your code that Python ignores when running the program. They’re there just for humans to read.
+
+You use comments to:
+
++ Explain what your code does
+
++ Leave notes for yourself or others
+
++ Temporarily disable code (for debugging)
+
+### How to Write Comments
+
+1. Single-line comments
+
+Start the line (or part of a line) with a hash symbol #.
+
+```python
+# This is a comment
+print("Hello, world!")  # This prints a message
+```
+
+Python ignores everything after `#` on that line.
+
+2. Multi-line comments
+
+Python doesn’t have a special multi-line comment syntax, but you can:
+
++ Use multiple # lines:
+
+```python
+# This is a multi-line comment
+# Each line starts with a hash
+# Useful for longer explanations
+```
+
++ Or use a multi-line string (triple quotes) that’s not assigned to any variable.
+
+It works as a block comment because it’s ignored when not used.
+
+```python
+"""
+This is a multi-line comment
+using triple quotes.
+Python ignores it if it's not assigned.
+"""
+```
+
+### :warning: Note on Docstrings
+
+Triple-quoted strings like `""" ... """` are mainly used for docstrings — documentation inside functions, classes, or modules.
+
+Example:
+
+```python
+def greet():
+    """This function prints a greeting."""
+    print("Hello!")
+```
+
+Docstrings can be accessed programmatically and are part of good coding style.
+
+
