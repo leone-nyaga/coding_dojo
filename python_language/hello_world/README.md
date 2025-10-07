@@ -254,5 +254,83 @@ a = 10
 b = float(a)  # 10.0
 ```
 
+### Python Variables - Multiple Assignment
+
+In Python, you can assign multiple variables in a single line.
+
+Basic syntax:
+
+```python
+a, b = 1, 2
+```
+
+This sets:
+
++ `a = 1`
+
++ `b = 2`
+
+### :brain: Why Use It?
+
+It makes code:
+
++ More concise
+
++ Easier to read
+
++ Very handy in things like swapping values, working with tuples, or returning multiple values from functions
+
+### :wrench: Examples
+
+1. Assigning multiple values
+
+```python
+x, y, z = 10, 20, 30
+print(x, y, z)
+# Output: 10 20 30
+```
+
+2. Swapping values (Pythonic way)
+
+```python
+a, b = 5, 10
+a, b = b, a
+print(a, b)
+# Output: 10 5
+```
+
+3. Same value to multiple variables
+
+```python
+a = b = c = 100
+print(a, b, c)
+# Output: 100 100 100
+```
+
+4. Using `_` to ignore values
+
+```python
+a, _, c = (1, 2, 3)
+print(a, c)
+# Output: 1 3
+```
+
+### Python Variables - Naming Convention
+
++ A variable name must start with a letter or the underscore character
++ A variable name cannot start with a number or any special character like $, (, * % etc.
++ A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
++ Python variable names are case-sensitive which means Name and NAME are two different variables in Python.
++ Python reserved keywords cannot be used naming the variable.
+
+If the name of variable contains multiple words, we should use these naming patterns −
+
++ `Camel case` − First letter is a lowercase, but first letter of each subsequent word is in uppercase. For example: kmPerHour, pricePerLitre
+
++ `Pascal case` − First letter of each word is in uppercase. For example: KmPerHour, PricePerLitre
+
++ `Snake case` − Use single underscore (_) character to separate words. For example: km_per_hour, price_per_litre
+
+###
 
 
