@@ -331,6 +331,187 @@ If the name of variable contains multiple words, we should use these naming patt
 
 + `Snake case` − Use single underscore (_) character to separate words. For example: km_per_hour, price_per_litre
 
-###
+### Python Data Types
+
+In Python, data types define what kind of value a variable holds — a number, text, list, etc. Python is dynamically typed, meaning you don’t need to declare types explicitly (Python figures it out).
+
+### :bricks: Basic Python Data Types
+
+1. Text Type
+
++ `str` – String (text)
+
+```python
+name = "Alice"
+```
+
+2. Numeric Types
+
++ `int` – Integer (whole numbers)
+
++ `float` – Decimal numbers
+
++ `complex` – Complex numbers (e.g., 1 + 2j)
+
+```python
+age = 25          # int
+pi = 3.14         # float
+z = 2 + 3j        # complex
+```
+
+3. Boolean Type
+
++ `bool` – True or False
+
+```python
+is_active = True
+is_banned = False
+```
+
+4. Sequence Types
+
++ `list` – Ordered, changeable, allows duplicates
+
++ `tuple` – Ordered, unchangeable, allows duplicates
+
++ `range` – Sequence of numbers
+
+```python
+fruits = ["apple", "banana"]      # list
+point = (10, 20)                  # tuple
+nums = range(5)            	  # from 0 to 4
+```
+
+5. Mapping Type
+
++ `dict` – Key-value pairs (like JSON objects)
+
+```python
+user = {"name": "Alice", "age": 30}
+```
+
+6. Set Types
+
++ `set` – Unordered, no duplicates
+
++ `frozenset` – Like a set, but immutable
+
+```python
+colors = {"red", "green", "blue"}
+```
+
+7. None Type
+
++ `NoneType` – Represents “no value” or “empty”
+
+```python
+value = None
+```
+
+### :test_tube: How to Check a Variable's Type
+
+```python
+x = "hello"
+print(type(x))  # Output: <class 'str'>
+```
+
+### :brain: Summary Table
+
+| Data Type  | Example          | Description             |
+| ---------- | ---------------- | ----------------------- |
+| `str`      | `"hello"`        | Text                    |
+| `int`      | `10`             | Whole number            |
+| `float`    | `3.14`           | Decimal number          |
+| `bool`     | `True` / `False` | Boolean logic           |
+| `list`     | `[1, 2, 3]`      | Ordered, changeable     |
+| `tuple`    | `(1, 2, 3)`      | Ordered, unchangeable   |
+| `dict`     | `{"a": 1}`       | Key-value store         |
+| `set`      | `{1, 2, 3}`      | Unordered, unique items |
+| `NoneType` | `None`           | No value / null         |
+
+## Python operators
+
+Operators are special symbols or keywords in Python used to perform operations on variables and values.
+
+1. Arithmetic Operators
+
+Used for basic maths:
+
+| Operator | Description         | Example         |
+| -------- | ------------------- | --------------- |
+| `+`      | Addition            | `a + b` → `7`   |
+| `-`      | Subtraction         | `a - b` → `3`   |
+| `*`      | Multiplication      | `a * b` → `10`  |
+| `/`      | Division            | `a / b` → `2.5` |
+| `//`     | Floor Division      | `a // b` → `2`  |
+| `%`      | Modulus (remainder) | `a % b` → `1`   |
+| `**`     | Exponentiation      | `a ** b` → `25` |
+
+2. Assignment Operators
+
+Used to assign values to variables:
+
+| Operator | Example   | Meaning       |
+| -------- | --------- | ------------- |
+| `=`      | `x = 5`   | Assign 5 to x |
+| `+=`     | `x += 1`  | `x = x + 1`   |
+| `-=`     | `x -= 1`  | `x = x - 1`   |
+| `*=`     | `x *= 2`  | `x = x * 2`   |
+| `/=`     | `x /= 2`  | `x = x / 2`   |
+| `//=`    | `x //= 2` | `x = x // 2`  |
+| `%=`     | `x %= 3`  | `x = x % 3`   |
+| `**=`    | `x **= 2` | `x = x ** 2`  |
+
+3. Comparison Operators
+
+Used to compare values — result is always `True` or `False`:
+
+| Operator | Description      | Example  |
+| -------- | ---------------- | -------- |
+| `==`     | Equal to         | `a == b` |
+| `!=`     | Not equal to     | `a != b` |
+| `>`      | Greater than     | `a > b`  |
+| `<`      | Less than        | `a < b`  |
+| `>=`     | Greater or equal | `a >= b` |
+| `<=`     | Less or equal    | `a <= b` |
+
+4. Logical Operators
+
+Used to combine conditional statements:
+
+| Operator | Description               | Example            |
+| -------- | ------------------------- | ------------------ |
+| `and`    | True if both are true     | `x > 1 and x < 10` |
+| `or`     | True if at least one true | `x < 1 or x > 10`  |
+| `not`    | Reverses the result       | `not(x > 5)`       |
+
+5. Membership Operators
+
+Test if a value is in a sequence:
+
+| Operator | Description       | Example                   |
+| -------- | ----------------- | ------------------------- |
+| `in`     | Is value in list? | `"a" in "cat"` → True     |
+| `not in` | Is value missing? | `"x" not in "dog"` → True |
+
+6. Identity Operators
+
+Check if two variables point to the same object (not just same value):
+
+| Operator | Description        | Example      |
+| -------- | ------------------ | ------------ |
+| `is`     | Same object?       | `a is b`     |
+| `is not` | Different objects? | `a is not b` |
+
+### :test_tube: Bonus: Bitwise Operators (For advanced usage)
+
+| Operator    | Symbol | Example  |    |    |
+| ----------- | ------ | -------- | -- | -- |
+| AND         | `&`    | `a & b`  |    |    |
+| OR          | `      | `        | `a | b` |
+| XOR         | `^`    | `a ^ b`  |    |    |
+| NOT         | `~`    | `~a`     |    |    |
+| Shift Left  | `<<`   | `a << 1` |    |    |
+| Shift Right | `>>`   | `a >> 1` |    |    |
 
 
