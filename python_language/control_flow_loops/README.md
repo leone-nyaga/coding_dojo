@@ -91,4 +91,79 @@ age: 25
 eligible to vote
 ```
 
+## if elif else Statement
+
+The if elif else statement allows you to check multiple expressions for TRUE and execute a block of code as soon as one of the conditions evaluates to TRUE.
+
+Similar to the else block, the elif block is also optional. However, a program can contains only one else block whereas there can be an arbitrary number of elif blocks following an if block.
+
+### syntax
+
+```python
+if expression1:
+   statement(s)
+elif expression2:
+   statement(s)
+elif expression3:
+   statement(s)
+else:
+   statement(s)
+```
+
+### Example with if else
+
+```python
+amount = 2500
+print('Amount = ',amount)
+if amount > 10000:
+   discount = amount * 20 / 100
+else:
+   if amount > 5000:
+      discount = amount * 10 / 100
+   else:
+      if amount > 1000:
+         discount = amount * 5 / 100
+      else:
+         discount = 0
+
+print('Payable amount = ',amount - discount)
+```
+
+### Output
+
+```bash
+Amount: 800
+Payable amount = 800
+Amount: 2500
+Payable amount = 2375.0
+Amount: 7500
+Payable amount = 6750.0
+Amount: 15000
+Payable amount = 12000.0
+```
+
+### With elif
+
+```python
+amount = 2500
+print('Amount = ',amount)
+if amount > 10000:
+   discount = amount * 20 / 100
+elif amount > 5000:
+   discount = amount * 10 / 100
+elif amount > 1000:
+   discount = amount * 5 / 100
+else:
+   discount=0
+
+print('Payable amount = ',amount - discount)
+```
+
+### output
+
+```bash
+Amount: 2500
+Payable amount = 2375.0
+```
+
 
