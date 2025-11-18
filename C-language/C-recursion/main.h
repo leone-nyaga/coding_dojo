@@ -11,5 +11,6 @@ void _puts_recursion(char *s);
 int factorial(int n);
 int _pow_recursion(int x, int y);
 int sum_recursion(int num);
+int sumEven_recursion(int num);
 
 #endif
