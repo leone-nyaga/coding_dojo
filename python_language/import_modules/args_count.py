@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+
 """
-This script prints the command line arguments
+Script that prints the number of arguments passed.
 """
 
 import sys
@@ -10,8 +11,8 @@ def main():
     """
     Entry point
     """
-    args_lst = sys.argv
-    print(args_lst)
+    nums = len(sys.argv) - 1
+    print(nums)
 
 if __name__ == "__main__":
     main()
