@@ -21,6 +21,52 @@ OOP also exists in other programming languages and is often described to center 
 
 4. **Polymorphism** allows you to treat objects of different types as instances of the same base type, as long as they implement a common interface or behavior. Python’s duck typing make it especially suited for polymorphism, as it allows you to access attributes and methods on objects without needing to worry about their actual class.
 
+## Encapsulation - The art of guarding state
+
+Encapsulation means: An object owns its data, and controls how that data is touched.
+
+Not:
+
++ “Hide everything”
+
++ “Use underscores everywhere”
+
++ “Make Java but in Python”
+
+But:
+
++ Protect invariants
+
++ Prevent illegal states
+
++ Force correct usage
+
+Python has no true private variables.
+
+Underscores are social contracts, not force fields.
+
+1. **name** — Public (No Protection)
+
+Anyone may touch this.
+
+```python
+self.health
+```
+
++ Fully public
+
++ No expectations of safety
+
++ Anyone can modify it freely
+
+Use when:
+
++ There is no invariant to protect
+
++ It’s just data
+
+2. ```_name``` 
+
 ## How to define a class
 
 In Python, you define a class by using the class keyword followed by a name and a colon. Then you use .__init__() to declare which attributes each instance of the class should have:
