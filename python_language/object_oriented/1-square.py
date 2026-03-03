@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 class Square:
     """A square class"""
 
@@ -10,6 +11,7 @@ class Square:
             size: length of one side of a square.
         """
         self.__size: int = size
+
 
 def main() -> None:
     """Test attribute access behavior."""
@@ -26,6 +28,7 @@ def main() -> None:
         print(my_square.__size)
     except Exception as e:
         print(e)
+
 
 if __name__ == '__main__':
     main()
