@@ -21,7 +21,7 @@ OOP also exists in other programming languages and is often described to center 
 
 4. **Polymorphism** allows you to treat objects of different types as instances of the same base type, as long as they implement a common interface or behavior. Python’s duck typing make it especially suited for polymorphism, as it allows you to access attributes and methods on objects without needing to worry about their actual class.
 
-## Encapsulation - The art of guarding state
+## Encapsulation
 
 Encapsulation means: An object owns its data, and controls how that data is touched.
 
@@ -45,7 +45,7 @@ Python has no true private variables.
 
 Underscores are social contracts, not force fields.
 
-1. **name** — Public (No Protection)
+1. ```name``` — Public (No Protection)
 
 Anyone may touch this.
 
@@ -65,7 +65,97 @@ Use when:
 
 + It’s just data
 
-2. ```_name``` 
+2. ```_name``` — Protected by Convention
+
+You shouldn't touch this.
+
+```python
+self._health
+```
+
++ Means: internal use
+
++ Python will not stop access
+
++ Other programmers are expected to respect it
+
+This is the most common and most useful form of encapsulation in Python.
+
+3. ```__name``` — Name Mangling (Pseudo-Private)
+
+You really shouldn't touch this.
+
+```python
+self.__health
+```
+
++ Python rewrites it internally to ```_ClassName__health```
+
++ Prevents accidental access
+
++ Still accessible if someone insists
+
+This is used to:
+
++ Avoid subclass collisions
+
++ Protect internal mechanics
+
+4. ```__name__``` — Dunder (Reserved Magic)
+
+Hands off. This belongs to Python.
+
+Examples:
+
++ ```__init__```
+
++ ```__str__```
+
++ ```__len__```
+
+Never invent your own dunder names.
+
+That way lies madness.
+
+Example
+
+```python
+class Health:
+    def __init__(self, max_hp):
+        self._max_hp = max_hp
+        self._current_hp = max_hp
+
+    def take_damage(self, amount):
+        if amount < 0:
+            raise ValueError("Damage cannot be negative")
+
+        self._current_hp = max(0, self._current_hp - amount)
+
+    def heal(self, amount):
+        if amount < 0:
+            raise ValueError("Healing cannot be negative")
+
+        self._current_hp = min(self._max_hp, self._current_hp + amount)
+
+    def is_alive(self):
+        return self._current_hp > 0
+```
+
+What is encapsulated here?
+
++ ```_current_hp``` cannot go:
+
+  + below 0
+
+  + above ```_max_hp```
+
++ No outside code can accidentally break the rules
+
++ All changes go through controlled methods
+
+## Polymorphism
+
+
 
 ## How to define a class
 
