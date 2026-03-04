@@ -4,7 +4,7 @@
 class Square:
     """Represents a Square Class"""
 
-    def __init__(self, size: int =0) -> None:
+    def __init__(self, size: int = 0) -> None:
         """
         Initializes the Square.
 
@@ -17,7 +17,6 @@ class Square:
             raise ValueError("Size must be greater than zero!")
 
         self.__size = size
-
 
     def area(self) -> int:
         """
