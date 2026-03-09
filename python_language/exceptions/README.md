@@ -101,3 +101,14 @@ The ```else``` block runs only if no exceptions occur in the ```try``` block.
 
 + The result of ```10 / num``` is printed.
 
+## How to raise an exemption
+
+We raise an exception in Python using the ```raise``` keyword followed by an instance of the exception class that we want to trigger. We can choose from built-in exceptions or define our own custom exceptions by inheriting from Python's built-in Exception class.
+
+### Syntax
+
+```python
+raise ExceptionType("Error message")
+```
+
+
