@@ -106,4 +106,48 @@ But according to the C standard, the correct type for %p is:
 printf("%p\n", (void *)&x);
 ```
 
+## The Address of (&) operator and the dereference ('*') operator
 
+1. The Address of operator (&)
+
+The operator used to obtain the memory address of a variable in C is the address-of operator, denoted by the ampersand symbol (&).
+
+When the & operator is placed immediately before a variable name, it returns the starting memory address (a pointer value) of that variable.
+
+Syntax:
+
+```c
+&variable_name
+```
+
+Example:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int num = 10;
+    int *ptr;
+
+    // Use the address-of operator to get the address of 'num'
+    ptr = &num;
+
+    printf("Value of num: %d\n", num);
+    printf("Address of num: %p\n", &num); // Prints the address using the & operator
+    printf("Value stored in ptr (address of num): %p\n", ptr); // Prints the address stored in the pointer
+
+    return 0;
+}
+```
+
+Explanation:
+
++ **int num = 10;** declares an integer variable **num** and assigns it a value.
+
++ **&num** retrieves the memory address where the value 10 is stored.
+
++ This address can be stored in a pointer variable (e.g., **ptr = &num;**) for later use, such as passing the variable by reference to a function or performing dynamic memory manipulation.
+
++ The **%p** format specifier is typically used with **printf** to display the memory address in hexadecimal format.
+
+2. The dereference operator (*)
