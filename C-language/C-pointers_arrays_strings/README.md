@@ -71,3 +71,39 @@ int main() {
 }
 ```
 
+### What is **(void *)** ????
+
++ It's a type cast.
+
++ It's called a **generic pointer** "convert this pointer to a void pointer."
+
+syntax
+```c
+void *p;
+```
+
+This pointer can store any address:
+
+```c
+int x = 5;
+char c = 'A';
+
+p = &x;
+p = &c;
+```
+
+It can also work without it
+
+```c
+printf("%p\n", &x);
+```
+
+It works because most compilers automatically convert pointer types.
+
+But according to the C standard, the correct type for %p is:
+
+```c
+printf("%p\n", (void *)&x);
+```
+
+
