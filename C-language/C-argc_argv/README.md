@@ -131,3 +131,108 @@ int main(int argc, char *argv[]) {
 
 
 ## Passing Numeric Arguments from the Command Line
+
+Let us write a C program that reads two command line arguments, and performs the addition of argv[1] and argv[2].
+
+### Example
+
+Start by saving the code below −
+
+```c
+#include <stdio.h>
+
+int main (int argc, char * argv[]) {
+
+   int c = argv[1] + argv[2];
+   printf("addition: %d", c);
+   
+   return 0;
+}
+```
+
+When we try to compile, you get the error message −
+
+```bash
+error: invalid operands to binary + (have 'char *' and 'char *')
+ int c = argv[1]+argv[2];
+         ~~~~~~~~~~~~~~
+```
+
+This is because the "+" operator cannot have non-numeric operands.
+
+To solve this issue, we need to use the library function **atoi()** that converts the string representation of a number to an integer.
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (int argc, char * argv[]) {
+
+   int c = atoi(argv[1]) + atoi(argv[2]);
+   printf("addition: %d", c);
+   
+   return 0;
+}
+```
+
+Compile and build an executive from "add.c" and run from the command line, passing numeric arguments −
+
+```bash
+C:\Users\user>add 10 20
+addition: 30
+```
+
+### Example
+
+You pass all the command line arguments separated by a space, but if the argument itself has a space, then you can pass such arguments by putting them inside double quotes (" ") or single quotes (' ').
+
+In this example, we will pass a command line argument enclosed inside double quotes −
+
+```c
+#include <stdio.h>
+
+int main(int argc, char *argv[]) {
+
+   printf("Program name %s\n", argv[0]);
+
+   if(argc == 2) {
+      printf("The argument supplied is %s\n", argv[1]);
+   }
+   else if(argc > 2) {
+      printf("Too many arguments supplied.\n");
+   }
+   else {
+      printf("One argument expected.\n");
+   }
+}
+```
+
+When the above code is compiled and executed with a single argument separated by space but inside double quotes, it produces the following output −
+
+```bash
+$./a.out "testing1 testing2"
+
+Program name ./a.out
+The argument supplied is testing1 testing2
+```
+
+
+## NB
+
++ ```argc``` (argument count) represents the number of arguments passed to the program, including the program name itself.
+
++ ```argv``` (argument vector) is an array of strings (```char *argv[]```) that stores the arguments passed via the command line.
+
++ ```argv[0]``` always contains the name (or path) used to execute the program.
+
++ All command-line arguments are passed as strings, even if they look like numbers.
+
++ To use numeric values, arguments must be converted from strings to integers using functions like ```atoi()``` (from ```stdlib.h```) or by manual conversion.
+
++ ```argv``` can also be treated as a pointer to pointers (```char **argv```), meaning:
+
+  + ```argv[i]``` is equivalent to ```*(argv + i)```
+
+  + ```argv[i][j]``` accesses individual characters within each argument
+
++ Always validate input when working with command-line arguments to avoid unexpected behavior.
