@@ -4,7 +4,7 @@ In any C program, there may be multiple functions, but the main() function remai
 While the other functions may have one or more arguments and a return type, the main() function is generally written with no arguments.
 The main() function also has a return value of "0".
 
-```main
+```c
 int main(void)
 {
     return 0;
@@ -110,3 +110,24 @@ One argument expected
 ```
 
 It should be noted that **argv[0]** holds the name of the program itself and **argv[1]** is a pointer to the first command line argument supplied, and **(*)argv[n]** is the last argument. If no arguments are supplied, then **argc** will be set at **"1"** and if you pass one argument, then argc is set at **"2"**.
+
+## Void
+
+Sometimes **argc** and **argv** are required by the function signature but not used in the program.
+
+To prevent compiler warnings:
+
+```c
+int main(int argc, char *argv[]) {
+    (void)argc;
+    (void)argv;
+    return 0;
+}
+```
+
++ ```(void)argc;``` and ```(void)argv;``` explicitly mark the parameters as intentionally unused.
+
++ This is commonly used to suppress compiler warnings.
+
+
+## Passing Numeric Arguments from the Command Line
