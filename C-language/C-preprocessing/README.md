@@ -63,4 +63,130 @@ Line: 8
 ANSI: 1
 ```
 
+## Macros
 
+**Macros** in C are the names given to specific constant values or code statements which are replaced with their value/code before the compilation processor. C Macros are defined using the **#define** preprocessor directive.
+
+**Macros** are useful for code reusability, defining constant values, defining inline functions, and conditional compilations.
+
+The following are the different types of C macros that we are going to cover in this tutorial –
+
++ Object-like Macros
++ Function-like Macros
++ Chained Macros
++ Variadic Macros
++ Predefined Macros
+
+### Syntax
+
+```c
+#define name value
+```
+
+### Example of Object-like Macros
+
+```c
+#include <stdio.h>
+
+// Defining macros
+#define PI 3.14
+#define MAX 10
+
+int main() {
+   // Printing the values
+   printf("Value of PI = %d\n", PI);
+   printf("Value of MAX = %d\n", MAX);
+
+   return 0;
+}
+```
+
+## Function-like Macro
+
+To define a function-like macro, you use the same "#define" directive, but you put a pair of parentheses immediately after the macro name, with one or more arguments. Such a macro is expanded only when its name appears with a pair of parentheses after it.
+
+When the preprocessor expands such a macro, it incorporates the specified arguments in the replacement text. The function-like macros are often called Macros with parameters (or arguments).
+
+### Syntax
+
+```c
+#define macro_name([parameter_list]) replacement_text
+```
+
+### Example of Function-like Macros
+
+```c
+#include <stdio.h>
+
+#define square(x) ((x) * (x))
+
+int main(){
+
+   int x = 5;
+   printf("x: %d \tSquare of x: %d", x, square(x));
+   return 0;
+}
+```
+
+Output
+
+```bash
+x: 5 	Square of x: 25
+```
+
+### Rules for Defining Function-like Macros
+
+Some rules of defining a function also apply to macros −
+
++ A macro can be defined without arguments
++ A macro can be defined with a fixed number of arguments
++ A macro can be defined with a variable number of arguments
+
+## Function-like Macros without Arguments
+
+A function-like macro may also be defined without arguments.
+
+### Example
+
+```c
+#include <stdio.h>
+
+#define MESSAGE() printf("Hello World");
+
+int main() {
+
+   int x = 5;
+   MESSAGE();
+   return 0;
+}
+```
+
+output
+
+```bash
+Hello World
+```
+
+## Chained Macros
+
+When we have a macro nested inside another macro, they are called Chained Macros.
+
+```c
+#include <stdio.h>
+
+#define PI 3.142
+#define CIRCUMFERENCE(x) (2*PI*x)
+
+int main(){
+
+   int x = 5;
+   printf("Circumference of a circle with radius %d is %f", x, CIRCUMFERENCE(x));
+   return 0;
+}
+```
+
+output
+
+```bash
+Circumference of a circle with radius 5 is 31.420000
+```
