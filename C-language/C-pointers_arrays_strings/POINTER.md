@@ -170,3 +170,102 @@ printf("%d", *p);
 + ```*p``` → gives the value at that address
 
 OUTPUT ----> ```10```
+
+## Application of Pointers
+
+1. Access Array elements
+
+Array elements can also be accessed through the pointer. You need to declare and initialize a pointer to an array and using it you can access each element by incrementing the pointer variable by 1.
+
+The pointer to an array is the address of its 0th element. When the array pointer is incremented by 1, it points to the next element in the array.
+
+### Example
+
+```c
+#include <stdio.h>
+
+int main(){
+
+   int arr[] = {1,2,3,4,5};
+   int *ptr = arr;
+
+   for(int i = 0; i <= 4; i++){
+      printf("arr[%d]: %d\n", i, *ptr);
+      ptr++;
+   }
+   
+   return 0;
+}
+```
+
+Output
+
+```bash
+arr[0]: 1
+arr[1]: 2
+arr[2]: 3
+arr[3]: 4
+arr[4]: 5
+```
+
+2. For Allocating Memory Dynamically
+
+One of the most important applications of C pointers is to declare memory for the variables dynamically. There are various situations, where static memory allocation cannot solve the problem, such as dealing with large size of arrays, structures having n numbers of students and employees, etc.
+
+Thus, whenever you need to allocate memory dynamically, pointers play an important role in it. C language provides some of the functions to allocate and release the memory dynamically. The functions are:
+
+```
+**malloc()** function
+Allocates an array of num elements each of which size in bytes will be size.
+**calloc()** function
+Allocates an array of num bytes and leaves them uninitialized.
+**realloc()** function
+Reallocates memory extending it up to newsize.
+```
+
+### The malloc() Function
+
+This function is defined in the "stdlib.h" header file. It allocates a block memory of the required size and returns a **void** pointer.
+
+```c
+void *malloc (size)
+```
+
+The size parameter refers to the block of memory in bytes. To allocate the memory required for a specified data type, you need to use the typecasting operator. For example, the following snippet allocates the memory required to store an int type.
+
+```c
+int *ptr;
+ptr = (int * ) malloc (sizeof (int));
+```
+
+Here we need to define a pointer to character without defining how much memory is required and later, based on requirement, we can allocate memory.
+
+In this example, we use the malloc() function to allocate the required memory to store a string (instead of declaring a char array of a fixed size) −
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(){
+
+   char *name;
+   name = (char *) malloc(strlen("TutorialsPoint"));
+
+   strcpy(name, "TutorialsPoint");
+   
+   if(name == NULL) {
+      fprintf(stderr, "Error - unable to allocate required memory\n");
+   } else {
+      printf("Name = %s\n", name );
+   }
+}
+```
+
+When the above code is compiled and executed, it produces the following output −
+
+```bash
+Name = TutorialsPoint
+```
+
+
