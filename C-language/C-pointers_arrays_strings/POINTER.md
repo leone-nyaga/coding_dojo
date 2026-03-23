@@ -151,3 +151,22 @@ Explanation:
 + The **%p** format specifier is typically used with **printf** to display the memory address in hexadecimal format.
 
 2. The dereference operator (*)
+
++ Also known as "Value at address" operator.
+
++ It is used to get the value stored at a memory address.
+
+```c
+int x = 10;
+int *p = &x;
+
+printf("%d", *p);
+```
+
++ ```&x``` → gives the address of x
+
++ ```p``` stores that address
+
++ ```*p``` → gives the value at that address
+
+OUTPUT ----> ```10```
