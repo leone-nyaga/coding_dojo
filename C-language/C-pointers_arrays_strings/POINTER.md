@@ -268,4 +268,188 @@ When the above code is compiled and executed, it produces the following output �
 Name = TutorialsPoint
 ```
 
+### The calloc() Function
 
+The C library function **"calloc"** (stands for contiguous allocation) allocates the requested memory and returns a pointer to it.
+
+```c
+void *calloc(n, size);
+```
+
+Where **"n"** is the number of elements to be allocated and "size" is the byte size of each element.
+
+The following snippet allocates the memory required to store 10 integer types.
+
+```c
+int *ptr;
+ptr = (int *) calloc(25, sizeof(int));
+```
+
+### The realloc() Function
+
+The **realloc()** function in C is used to dynamically change the memory allocation of a previously allocated memory. You can increase or decrease the size of an allocated memory block by calling the **realloc()** function.
+
+```c
+void *realloc(*ptr, size);
+```
+
+The first parameter **"ptr"** is the pointer to a memory block previously allocated with **malloc**, **calloc** or **realloc** to be reallocated.
+
+Dynamic memory allocation technique is extensively used in complex linear and non−linear data structures such as linked lists and trees, which are employed in operating system software.
+
+3. For Passing Arguments as Reference
+
+When a function is called by reference, the address of the actual argument variables passed, instead of their values.
+
+Passing a pointer to a function has two advantages −
+
++ First, it overcomes the limitation of pass by value. Changes to the value inside the called function are done directly at the address stored in the pointer. Hence, we can manipulate the variables in one scope from another.
+
++ Second, it also overcomes the limitation of a function in that it can return only one expression. By passing pointers, the effect of processing a function takes place directly at the address. Secondly, more than one value can be returned if we return the pointer of an array or struct variable.
+
+### Example
+
+The following function receives the reference of two variables whose values are to be swapped.
+
+```c
+/* function definition to swap the values */
+
+int swap(int *x, int *y){
+   int z;
+   z = *x;    /* save the value at address x */
+   *x = *y;   /* put y into x */
+   *y = z;    /* put z into y */
+  
+   return 0;
+}
+```
+
+### Example
+
+The main() function has two variables "a" and "b", their addresses are passed as arguments to the swap() function.
+
+```c
+#include <stdio.h>
+
+int swap(int *x, int *y);
+
+int main(){
+
+   /* local variable definition */
+   int a = 10;
+   int b = 20;
+ 
+   printf("Before swap, value of a : %d\n", a);
+   printf("Before swap, value of b : %d\n", b);
+ 
+   /* calling a function to swap the values */
+   swap(&a, &b);
+ 
+   printf("After swap, value of a: %d\n", a);
+   printf("After swap, value of b: %d\n", b);
+ 
+   return 0;
+}
+```
+
+Output
+
+```bash
+Before swap, value of a: 10
+Before swap, value of b: 20
+After swap, value of a: 20
+After swap, value of b: 10
+```
+
+4. For Passing an Array to Function
+
+Let us use these characteristics for passing the array by reference. In the main() function, we declare an array and pass its address to the **max()** function.
+
+The **max()** function traverses the array using the pointer and returns the largest number in the array, back to the main() function.
+
+### Example
+
+Take a look at the following example −
+
+```c
+#include <stdio.h>
+
+int max(int *arr, int length);
+
+int main(){
+    
+   int arr[] = {10, 34, 21, 78, 5};
+   int length = sizeof(arr)/sizeof(int);
+
+   int maxnum = max(arr, length);
+      printf("max: %d", maxnum);
+}
+
+int max(int *arr, int length){
+
+   int max = *arr;
+        
+   for (int i = 0; i < length; i++){   
+      printf("arr[%d]: %d\n", i, (*arr));
+        
+      if ((*arr)>max)
+         max = (*arr);
+      arr++;
+   }
+   return max;
+}
+```
+
+Output
+
+```bash
+arr[0]: 10
+arr[1]: 34
+arr[2]: 21
+arr[3]: 78
+arr[4]: 5
+max: 78
+```
+
+5. For Returning Multiple Values from a Function
+
+In the C language, the functions can have only one return statement to return one value at a time. With the help of C pointers, you can return multiple values from a function by passing arguments as references.
+
+### Example
+
+The following example demonstrates how you can return multiple values with the help of C pointers.
+
+```c
+#include <stdio.h>
+
+// Creating a function to find
+// addition and subtraction
+// of two numbers
+void funAddSub(int a, int b, int* add, int* sub) {
+  *add = a + b;
+  *sub = a - b;
+}
+
+int main() {
+  int num1 = 10;
+  int num2 = 3;
+
+  // Variables to store results
+  int res1, res2;
+
+  // Calling function to get add and sub
+  // by passing the address of res1 and res2
+  funAddSub(num1, num2, &res1, &res2);
+
+  // Printing the result
+  printf("Addition is %d and subtraction is %d", res1, res2);
+
+  return 0;
+}
+```
+
+Output
+
+```bash
+Addition is 13 and subtraction is 7
+```
