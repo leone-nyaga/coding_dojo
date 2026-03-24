@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * minMax - Function that finds the maximum and minimum values in an array.
+ * @arr: array of integers.
+ * @min: the minimum integer
+ * @max: the maximum integer
+ * @len: length of array.
+ */
 void minMax(int arr[], int *min, int *max, int len)
 {
 	int i;
@@ -25,10 +32,16 @@ void minMax(int arr[], int *min, int *max, int len)
 	}
 }
 
+/**
+ * main - Entry point
+ *
+ * Return: 0
+ */
 int main(void)
 {
 	int data[] = {10, 5, 70, 99, 89, 1};
 	int min, max, lenght;
+
 	lenght = 6;
 	minMax(data, &min, &max, lenght);
 
