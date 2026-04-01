@@ -68,4 +68,152 @@ Greeting message: Hello
 
 You can declare an oversized array and assign less number of characters, to which the C compiler has no issues. However, if the size is less than the characters in the initialization, you may get garbage values in the output.
 
+## String Input Using gets() and fgets() Functions
+
+To accept a string input with whitespaces in between, we should use the gets() function. It is called an unformatted console input function, defined in the "stdio.h" header file.
+
+### Using gets()
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+
+   char name[20];
+
+   printf("Enter a name:\n");
+   gets(name);
+
+   printf("You entered: \n");
+   printf("%s", name);
+
+   return 0;
+}
+```
+
+output
+
+```bash
+Enter a name:
+Sachin Tendulkar
+
+You entered: 
+Sachin Tendulkar
+```
+
+In newer versions of C, gets() has been deprecated. It is potentially a dangerous function because it doesnt perform bound checks and may result in buffer overflow.
+
+Instead, it is advised to use the fgets() function.
+
+```c
+fgets(char arr[], size, stream);
+```
+
+Parameters:
+
++ ```arr```: the character array (buffer) where the string will be stored.
+
++ ```size```: maximum number of characters to read (including the null \0).
+
++ ```stream```: input source (like stdin or a file pointer).
+
+### Example
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+
+   char name[20];
+
+   printf("Enter a name:\n");
+   fgets(name, sizeof(name), stdin);
+
+   printf("You entered: \n");
+   printf("%s", name);
+
+   return 0;
+}
+```
+
+The ouput:
+
+```bash
+Enter a name:
+Virat Kohli
+
+You entered: 
+Virat Kohli
+```
+
+## Scanf
+
+```scanf``` is another standard input function in C, but it works quite differently from fgets.
+
+Example
+
+```c
+#include <stdio.h>
+
+int main() {
+    int age;
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    printf("You are %d years old\n", age);
+    return 0;
+}
+```
+
+Reading strings
+
+```c
+char name[50];
+scanf("%s", name);
+```
+
+### Key differences from fgets
+
++ ```scanf("%s", name)``` stops at whitespace (so it won’t read full sentences)
+
++ ```fgets()``` reads a whole line, including spaces
+
++ ```scanf``` can be unsafe if you don’t limit input size
+
+## Printing String Using puts() and fputs() Functions
+
+We have been using printf() function with %s specifier to print a string. We can also use puts() function (deprecated in C11 and C17 versions) or fputs() function as an alternative.
+
+Example
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main (){
+
+   char name[20] = "Rakesh Sharma";
+
+   printf("With puts(): \n");
+   puts(name);
+
+   printf("With fputs(): \n");
+   fputs(name, stdout);
+
+   return 0;
+}
+```
+
+output
+
+```c
+With puts(): 
+Harbhajan Singh
+
+With fputs(): 
+Harbhajan Singh
+```
+
 
