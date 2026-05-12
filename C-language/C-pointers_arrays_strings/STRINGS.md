@@ -68,6 +68,68 @@ Greeting message: Hello
 
 You can declare an oversized array and assign less number of characters, to which the C compiler has no issues. However, if the size is less than the characters in the initialization, you may get garbage values in the output.
 
+## Using Pointers to Access Strings
+
+A pointer can point to the first character of a string, and pointer arithmetic can be used to navigate through the string.
+
+```c
+char str[] = "Pointers in C";
+char *ptr = str;  // Pointer to the first character
+
+while (*ptr != '\0') {
+    printf("%c", *ptr);
+    ptr++;  // Move to the next character
+}
+```
+
+This code prints each character of the string by dereferencing the pointer.
+
+### How to Work with Strings and Pointers in C
+
+1. Accessing String Elements with Pointers
+
+You can use pointers to access individual characters in a string:
+
+```c
+char str[] = "Example";
+char *ptr = str;
+
+for (int i = 0; ptr[i] != '\0'; i++) {
+    printf("%c", ptr[i]);
+}
+```
+
+2. Modifying Strings with Pointers
+
+Pointers can also be used to modify the contents of a string:
+
+```c
+char str[] = "Hello";
+char *ptr = str;
+
+ptr[0] = 'M';
+printf("%s", str);  // Outputs "Mello"
+```
+
+3. Passing Strings to Functions Using Pointers
+
+When passing strings to functions, pointers are used to avoid copying the entire array:
+
+```c
+void printString(char *str) {
+    while (*str != '\0') {
+        printf("%c", *str);
+        str++;
+    }
+}
+
+int main() {
+    char msg[] = "Hello, Pointers!";
+    printString(msg);
+    return 0;
+}
+```
+
 ## String Input Using gets() and fgets() Functions
 
 To accept a string input with whitespaces in between, we should use the gets() function. It is called an unformatted console input function, defined in the "stdio.h" header file.
@@ -214,6 +276,219 @@ Harbhajan Singh
 
 With fputs(): 
 Harbhajan Singh
+```
+
+## String Operations
+
+Located in the ```string.h``` file
+
+1. strcpy
+
+strcpy() copies one C string into another.
+
+```c
+strcpy(destination, source);
+```
+
+Example
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char source[] = "Beautiful";
+    char dest[20];
+
+    strcpy(dest, source);
+
+    printf("%s\n", dest);
+}
+```
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+char *string_copy(char *destined, char *sourced)
+{
+    strcpy(destined, sourced);
+    return (destined);
+}
+int main() {
+    char str1[10] = "Hello!";
+    char str2[10];
+    string_copy(str2, str1);
+    printf("%s\n", str2);
+    
+    return 0;
+}
+```
+
+Output:
+
+```bash
+Beautiful is better than ugly.
+```
+What the function looks like
+
+```c
+char *strcpy(char *dest, const char *src)
+{
+    int i = 0;
+
+    while (src[i] != '\0')
+    {
+        dest[i] = src[i];
+        i++;
+    }
+    dest[i] = '\0';
+
+    return dest;
+}
+```
+
+The destination array must be large enough.
+
+2. String length
+
+Is a function from the standard library used to find the length of a string (number of characters before the null terminator '\0').
+
+syntax
+
+```c
+size_t strlen(const char *str);
+```
+
+Example
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[] = "Hello";
+    int length = strlen(str);
+
+    printf("Length of string: %d\n", length);
+    return 0;
+}
+```
+
+Output
+
+```bash
+Length of string: 5
+```
+
+NB: Return type is ```size_t``` (an unsigned integer type).
+
+How it looks behind the scene:
+
+```c
+#include <stdio.h>
+
+size_t strlen(const char *str)
+{
+    int i = 0;
+
+    while (*str != '\0')
+    {
+        i++;
+        str++;
+    }
+    return i;
+}
+```
+
+3. String Concatenate
+
+The ```strcat``` (string concatenate) function is used to append one string to the end of another.
+
+Syntax:
+
+```c
+char *strcat(char *destination, const char *source);
+```
+
++ ```destination```: String to append to.
+
+```c
+char dest[50] = "Hello ";
+```
+
++ ```source```: String being appended to.
+
+```c
+char src[] = "World";
+```
+
+```Take string in source and attach it at the end of destination```
+
+Example
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char greeting[20] = "Hello"; // Large enough to fit "Hello" + " World"
+    char addition[] = " World";
+
+    // Appends " World" to "Hello"
+    strcat(greeting, addition);
+
+    printf("%s", greeting); // Output: Hello World
+    return 0;
+}
+```
+
+how it looks behind the scenes
+
+```c
+#include <stdio.h>
+
+char *_strcat(char *dest, const char *src)
+{
+    int i = 0;
+    int j = 0;
+    
+    while (dest[i] != '\0')
+    {
+        i++;
+    }
+    while (src[j] != '\0')
+    {
+        dest[i] = src[j];
+        i++;
+        j++;
+    }
+    dest[i] = '\0';
+    
+    return (dest);
+}
+
+int main()
+{
+    char str1[90] = "Beautiful is ";
+    char str2[90] = "better than ugly!";
+    
+    _strcat(str1, str2);
+    
+    printf("%s\n", str1);
+    
+    return (0);
+}
+```
+
+4. String Compare
+
+```strcmp()``` compares two strings.
+
+Syntax
+
+```c
+int strcmp(const char *s1, const char *s2);
 ```
 
 
