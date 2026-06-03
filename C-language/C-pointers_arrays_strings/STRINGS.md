@@ -491,4 +491,87 @@ Syntax
 int strcmp(const char *s1, const char *s2);
 ```
 
+Example
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+
+int main()
+{
+    char str1[] = "cat";
+    char str2[] = "cat";
+    
+    printf("%d\n", strcmp(str1, str2)); // output 0
+    return 0;
+}
+```
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+
+int main()
+{
+    char str1[] = "cat";
+    char str2[] = "car";
+    
+    printf("%d\n", strcmp(str1, str2)); // output 2
+    return 0;
+}
+```
+
+Best use cases
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+
+    char password[] = "admin123";
+    char input[20];
+
+    printf("Enter password: ");
+    scanf("%19s", input);
+
+    if (strcmp(password, input) == 0) {
+        printf("Access granted\n");
+    } else {
+        printf("Wrong password\n");
+    }
+
+    return 0;
+}
+```
+
+How it works in behind the scenes
+
+```c
+#include <stdio.h>
+
+int _strcmp(const char *str1, const char *str2)
+{
+    int i = 0;
+    
+    while (str1[i] == str2[i] && str1[i] != '\0')
+    {
+        i++;
+    }
+    return str1[i] - str2[i];
+}
+int main(void)
+{
+    printf("%d\n", _strcmp("abc", "abc")); // 0
+    printf("%d\n", _strcmp("abc", "abd")); // negative
+    printf("%d\n", _strcmp("abe", "abd")); // positive
+
+    return 0;
+}
+```
+
+5. strtok
+
 
