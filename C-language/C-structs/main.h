@@ -43,4 +43,18 @@ struct dog
 	char *owner;
 };
 
+/**
+ * struct Alien - information on aliens
+ * @name: name of alien
+ * @strength: strength of alien
+ * @planet: origin of alien
+ */
+
+typedef struct Alien
+{
+	char *name;
+	int strength;
+	char *planet;
+} alien;
+
 #endif
