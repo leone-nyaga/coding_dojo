@@ -173,6 +173,7 @@ int main()
 ```
 
 
+
 # File Descriptor
 
 In Unix type systems, a file descriptor ( fd for short) is a small positive integer used as reference to an open file in a process. A process is a currently running program.
