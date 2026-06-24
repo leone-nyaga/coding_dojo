@@ -76,3 +76,35 @@ Think of it like this:
 + Like a ticket system ? You bring your own ticket → use it : No ticket → system gives you next number.
 
 
+# 2. First Rectangle
+
+Write the class Rectangle that inherits from Base:
+
+```python
+def __init__(self, width, height, x=0, y=0, id=None):
+```
+
+This ```super().__init__(id)``` calls the parent class's constructor and passes the argument id to it.
+
+Private instance attributes, each with its own public getter and setter:
+
+```python
+# width getter and setter
+self.width = width
+
+@property
+def width(self):
+    """
+    Width of the rectangle.
+    """
+    return self.__width
+
+@width.setter
+def width(self, value):
+    """
+    Setter to width.
+    """
+    self.__width = value
+```
+
+
