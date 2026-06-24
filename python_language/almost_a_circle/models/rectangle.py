@@ -38,9 +38,9 @@ class Rectangle(Base):
         Setter to width.
         """
         if not isinstance(value, int):
-            raise TypeError("Width must be an integer")
+            raise TypeError("width must be an integer")
         if value < 0:
-            raise ValueError("Witdh must be greater than zero")
+            raise ValueError("witdh must be greater than zero")
         self.__width = value
 
     @property
@@ -58,7 +58,7 @@ class Rectangle(Base):
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("Height must be greater than zero")
+            raise ValueError("height must be greater than zero")
         self.__height = value
 
     @property
@@ -74,9 +74,9 @@ class Rectangle(Base):
         Setter to x.
         """
         if not isinstance(value, int):
-            raise TypeError("X must be an integer")
+            raise TypeError("x must be an integer")
         if value < 0:
-            raise ValueError("X must be greater than zero")
+            raise ValueError("x must be greater than zero")
         self.__x = value
 
     @property
@@ -92,9 +92,9 @@ class Rectangle(Base):
         Setter to y.
         """
         if not isinstance(value, int):
-            raise TypeError("X must be an integer")
+            raise TypeError("y must be an integer")
         if value < 0:
-            raise ValueError("X must be greater than zero")
+            raise ValueError("y must be greater than zero")
         self.__y = value
 
     def area(self):
@@ -108,4 +108,5 @@ class Rectangle(Base):
         Prints rectangle instance with the '#' character.
         """
         for _ in range(self.__height):
+            print("#" * self.__width)
 
