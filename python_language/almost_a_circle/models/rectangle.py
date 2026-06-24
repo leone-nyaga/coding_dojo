@@ -51,7 +51,7 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    def height(self):
+    def height(self, value):
         """
         Setter to height.
         """
@@ -76,7 +76,7 @@ class Rectangle(Base):
         if not isinstance(value, int):
             raise TypeError("X must be an integer")
         if value < 0:
-            raise ValueError("Height must be greater than zero")
+            raise ValueError("X must be greater than zero")
         self.__x = value
 
     @property
@@ -94,7 +94,7 @@ class Rectangle(Base):
         if not isinstance(value, int):
             raise TypeError("X must be an integer")
         if value < 0:
-            raise ValueError("Height must be greater than zero")
+            raise ValueError("X must be greater than zero")
         self.__y = value
 
     def area(self):
@@ -102,3 +102,10 @@ class Rectangle(Base):
         Function that calculates the area of a rectangle.
         """
         return self.__width * self.__height
+
+    def display(self):
+        """
+        Prints rectangle instance with the '#' character.
+        """
+        for _ in range(self.__height):
+
