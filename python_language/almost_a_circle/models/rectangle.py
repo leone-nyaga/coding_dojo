@@ -107,8 +107,15 @@ class Rectangle(Base):
         """
         Prints rectangle instance with the '#' character.
         """
+        for _ in range(self.__y):
+            print()
+
         for _ in range(self.__height):
-            print("#" * self.__width)
+            for _ in range(self.__x):
+                print(" ", end=" ")
+            for _ in range(self.__width):
+                print("#", end="")
+            print()
 
     def __str__(self):
         """
