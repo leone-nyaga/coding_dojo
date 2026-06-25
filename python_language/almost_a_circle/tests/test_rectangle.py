@@ -29,6 +29,15 @@ class TestRectangle(unittest.TestCase):
 
         self.assertEqual(rect1.area(), 50)
 
+    def test_str(self):
+        """
+        Tests if the str method have been overwritten successfully.
+        """
+        rect2 = Rectangle(4, 6, 2, 1, 12)
+        expected = "[Rectangle] (12) 2/1 - 4/6"
+
+        self.assertEqual(str(rect2), expected)
+
 
 
 if __name__ == '__main__':

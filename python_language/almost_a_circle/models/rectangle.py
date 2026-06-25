@@ -40,7 +40,7 @@ class Rectangle(Base):
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
-            raise ValueError("witdh must be greater than zero")
+            raise ValueError("width must be greater than zero")
         self.__width = value
 
     @property
@@ -109,4 +109,14 @@ class Rectangle(Base):
         """
         for _ in range(self.__height):
             print("#" * self.__width)
+
+    def __str__(self):
+        """
+        Prints the Rectangle representation in a particular format.
+        """
+        return (
+                f"[Rectangle] ({self.id}) " 
+                f"{self.__x}/{self.__y} - "
+                f"{self.__width}/{self.__height}"
+                )
 
