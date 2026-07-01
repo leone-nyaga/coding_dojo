@@ -38,6 +38,24 @@ class TestRectangle(unittest.TestCase):
 
         self.assertEqual(str(rect2), expected)
 
+    def test_to_dictionary(self):
+        """
+        Tests if the to_dictionary method will return a dictionary.
+        """
+        r = Rectangle(10, 2, 1, 9, 1)
+        r_dict = r.to_dictionary()
+
+        self.assertEqual(type(r_dict), dict)
+
+        expected_keys = ["id", "width", "height", "x", "y"]
+        self.assertEqual(sorted(r_dict.keys()), sorted(expected_keys))
+
+        self.assertEqual(r_dict["id"], 1)
+        self.assertEqual(r_dict["width"], 10)
+        self.assertEqual(r_dict["height"], 2)
+        self.assertEqual(r_dict["x"], 1)
+        self.assertEqual(r_dict["y"], 9)
+
 
 
 if __name__ == '__main__':
