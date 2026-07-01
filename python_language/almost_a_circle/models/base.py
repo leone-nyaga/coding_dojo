@@ -58,3 +58,27 @@ class Base:
 
         with open(filename, "w") as f:
             f.write(json_string)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        Returns the list of the JSON string representation json_string.
+        """
+        if not json_string:
+            return []
+
+        return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        Returns an instance with all attributes already set.
+        """
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        else:
+            dummy = cls(1)
+
+        dummy.update(**dictionary)
+
+        return dummy
