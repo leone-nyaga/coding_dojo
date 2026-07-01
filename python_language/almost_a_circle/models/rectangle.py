@@ -128,6 +128,10 @@ class Rectangle(Base):
                 )
 
     def update(self, *args, **kwargs):
+        """
+        Update the Rectangle attributes using *args in
+        order or **kwargs by key.
+        """
         if args and len(args) != 0:
             if len(args) >= 1:
                 self.id = args[0]
