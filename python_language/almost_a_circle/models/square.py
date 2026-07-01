@@ -40,3 +40,4 @@ class Square(Rectangle):
         String format representation.
         """
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
+
