@@ -29,6 +29,20 @@ class TestSquare(unittest.TestCase):
         expected = "[Square] (99) 2/3 - 5"
         self.assertEqual(str(s2), expected)
 
+    def test_to_dictionary(self):
+        s3 = Square(5, 2, 3, 1)
+        s_dict = s3.to_dictionary()
+
+        self.assertEqual(type(s_dict), dict)
+
+        expected_keys = ["id", "size", "x", "y"]
+        self.assertEqual(sorted(s_dict.keys()), sorted(expected_keys))
+
+        self.assertEqual(s_dict["id"], 1)
+        self.assertEqual(s_dict["size"], 5)
+        self.assertEqual(s_dict["x"], 2)
+        self.assertEqual(s_dict["y"], 3)
+
 
 if __name__ == '__main__':
     unittest.main()
