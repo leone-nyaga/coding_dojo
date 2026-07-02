@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import json
+import csv
 
 
 class Base:
@@ -98,3 +99,69 @@ class Base:
 
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        Serializes a list of objects to a CSV file.
+        """
+        filename = cls.__name__ + ".csv"
+
+        with open(filename, "w", newline="") as f:
+            writer = csv.writer(f)
+
+            if list_objs is None:
+                return
+
+            if list_objs is None:
+                d = obj.to_dictionary()
+
+                if cls.__name__ == "Rectangle":
+                    writer.writerow([
+                        d["id"],
+                        d["width"],
+                        d["height"],
+                        d["x"],
+                        d["y"]
+                        ])
+                else:
+                    writer.writerow([
+                        d["id"],
+                        d["size"],
+                        d["x"],
+                        d["y"]
+                        ])
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        Deserializes a CSV file to a list of instances.
+        """
+        filename = cls.__name__ + ".csv"
+        instances = []
+
+        try:
+            with open(filename, "r", newline="") as f:
+                reader = csv.reader(f)
+
+                for row in reader:
+                    if cls.__name__ == "Rectangle":
+                        dictionary = {
+                                "id": int(row[0]),
+                                "width": int(row[1]),
+                                "height": int(row[2]),
+                                "x": int(row[3]),
+                                "y": int(row[4])
+                                }
+                    else:
+                        dictionary = {
+                                "id": int(row[0]),
+                                "size": int(row[1]),
+                                "x": int(row[2]),
+                                "y": int(row[3])
+                                }
+                    instances.append(cls.create(**dictionary))
+        except FileNotFoundError:
+            return []
+
+        return instances
